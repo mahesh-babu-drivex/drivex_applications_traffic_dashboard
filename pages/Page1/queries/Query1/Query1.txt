@@ -1,7 +1,8 @@
-SELECT DATE(date) as "x",
-       sum(newusers) as "y"
+SELECT DATE(date) as date,
+       SUM(totalusers) as "total_users",
+       SUM(newusers) as "new_users"
 FROM website_dashboard.traffic_report
 WHERE TO_DATE(date, 'YYYYMMDD') >= CURRENT_DATE - INTERVAL '8 day' -- Updated to 8 days ago to exclude today
   AND TO_DATE(date, 'YYYYMMDD') < CURRENT_DATE - INTERVAL '0 day' -- Up to yesterday
-GROUP BY "x"
-ORDER BY "x";
+	GROUP BY date
+ORDER BY date;

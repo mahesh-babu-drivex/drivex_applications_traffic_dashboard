@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT DATE(createdat) as \"x\",\n       COUNT(DISTINCT phone) as \"y\"\nFROM website_dashboard.website_users1\nWHERE createdat >= CURRENT_DATE - INTERVAL '7 day'\nGROUP BY \"x\"\nORDER BY \"x\";\n",
+      "body": "SELECT DATE(date) as \"x\",\n       sum(newusers) as \"y\"\nFROM website_dashboard.traffic_report\nWHERE TO_DATE(date, 'YYYYMMDD') >= CURRENT_DATE - INTERVAL '8 day' -- Updated to 8 days ago to exclude today\n  AND TO_DATE(date, 'YYYYMMDD') < CURRENT_DATE - INTERVAL '0 day' -- Up to yesterday\nGROUP BY \"x\"\nORDER BY \"x\";\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],

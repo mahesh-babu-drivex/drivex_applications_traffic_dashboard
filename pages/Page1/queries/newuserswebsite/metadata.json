@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT COUNT(DISTINCT phone) as phone_count\nFROM website_dashboard.website_users1\nWHERE \n    TO_CHAR(createdat::timestamp, 'YYYY-MM-DD\"T\"HH24:MI:SS.MS\"Z\"') >= TO_CHAR('{{DatePicker1.formattedDate}}'::timestamp, 'YYYY-MM-DD\"T\"HH24:MI:SS.MS\"Z\"')\n    AND TO_CHAR(createdat::timestamp, 'YYYY-MM-DD\"T\"HH24:MI:SS.MS\"Z\"') <= TO_CHAR('{{DatePicker2.formattedDate}}'::timestamp, 'YYYY-MM-DD\"T\"HH24:MI:SS.MS\"Z\"');\n",
+      "body": "SELECT SUM(newusers) \nFROM website_dashboard.traffic_report\nWHERE TO_DATE(date, 'YYYYMMDD') = CURRENT_DATE - INTERVAL '1 day';\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -27,18 +27,11 @@
       ]
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "DatePicker1.formattedDate",
-      "DatePicker2.formattedDate"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

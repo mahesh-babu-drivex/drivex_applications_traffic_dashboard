@@ -1,7 +1,7 @@
 {
     "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-    "mobileBottomRow": 43,
-    "widgetName": "Chart1",
+    "mobileBottomRow": 142,
+    "widgetName": "Chart2",
     "allowScroll": false,
     "displayName": "Chart",
     "iconSVG": "/static/media/icon.8eea39845729f7f4bfadeecd3810a09d.svg",
@@ -10,27 +10,39 @@
         "visuals",
         "visualisations"
     ],
-    "topRow": 17,
-    "bottomRow": 44,
+    "topRow": 14,
+    "bottomRow": 43,
     "parentRowSpace": 10,
     "type": "CHART_WIDGET",
     "hideCard": false,
-    "mobileRightColumn": 60,
-    "chartData": {"hsuyfbntze": {
-        "data": "{{last7daystrendwebsite.data}}",
-        "seriesName": "2024"
+    "mobileRightColumn": 21,
+    "chartData": {"hxpfglskur": {
+        "data": [
+            {
+                "x": "Product1",
+                "y": 20000
+            },
+            {
+                "x": "Product2",
+                "y": 22000
+            },
+            {
+                "x": "Product3",
+                "y": 32000
+            }
+        ],
+        "seriesName": "2023"
     }},
     "animateLoading": true,
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-    "parentColumnSpace": 15.3529052734375,
+    "parentColumnSpace": 16.75,
     "dynamicTriggerPathList": [],
     "dynamicBindingPathList": [
-        {"key": "customEChartConfig"},
         {"key": "borderRadius"},
         {"key": "boxShadow"},
         {"key": "accentColor"},
         {"key": "fontFamily"},
-        {"key": "chartData.hsuyfbntze.data"}
+        {"key": "customEChartConfig"}
     ],
     "leftColumn": 0,
     "customFusionChartConfig": {
@@ -80,13 +92,13 @@
             }
         }
     },
-    "customEChartConfig": "{{\n{\n  \"dataset\": {\n    \"source\": [\n      [\n        \"Day\",\n        \"Baidu\",\n        \"Google\",\n        \"Bing\"\n      ],\n      [\n        \"Mon\",\n        620,\n        120,\n        60\n      ],\n      [\n        \"Tue\",\n        732,\n        132,\n        72\n      ],\n      [\n        \"Wed\",\n        701,\n        101,\n        71\n      ],\n      [\n        \"Thu\",\n        734,\n        134,\n        74\n      ],\n      [\n        \"Fri\",\n        1090,\n        290,\n        190\n      ],\n      [\n        \"Sat\",\n        1130,\n        230,\n        130\n      ],\n      [\n        \"Sun\",\n        1120,\n        220,\n        110\n      ]\n    ]\n  },\n  \"tooltip\": {\n    \"trigger\": \"axis\",\n    \"axisPointer\": {\n      \"type\": \"shadow\"\n    }\n  },\n  \"title\": {\n    \"text\": \"Search Engine Usage\",\n    \"left\": \"center\",\n    \"textStyle\": {\n      \"width\": 200,\n      \"overflow\": \"truncate\"\n    }\n  },\n  \"legend\": {\n    \"top\": 40,\n    \"type\": \"scroll\"\n  },\n  \"grid\": {\n    \"left\": 15,\n    \"right\": 15,\n    \"bottom\": 30,\n    \"top\": 100,\n    \"containLabel\": true\n  },\n  \"xAxis\": [\n    {\n      \"type\": \"category\"\n    }\n  ],\n  \"yAxis\": [\n    {\n      \"type\": \"value\"\n    }\n  ],\n  \"series\": [\n    {\n      \"type\": \"bar\",\n      \"stack\": \"Search Engine\"\n    },\n    {\n      \"type\": \"bar\",\n      \"stack\": \"Search Engine\"\n    },\n    {\n      \"type\": \"bar\",\n      \"stack\": \"Search Engine\"\n    }\n  ]\n}\n}}",
+    "customEChartConfig": "{{JSObject1.option}}",
     "flexVerticalAlignment": "start",
-    "showDataPointLabel": true,
-    "key": "27l93g1eqd",
+    "showDataPointLabel": false,
+    "key": "mmjklgxj68",
     "isDeprecated": false,
     "rightColumn": 64,
-    "widgetId": "1st735eiz0",
+    "widgetId": "2oyp1eceo2",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
     "minWidth": 450,
     "isVisible": true,
@@ -96,14 +108,14 @@
     "tags": ["Display"],
     "renderMode": "CANVAS",
     "isLoading": false,
-    "mobileTopRow": 11,
+    "mobileTopRow": 110,
     "responsiveBehavior": "fill",
-    "yAxisName": "Users Count",
-    "originalTopRow": 17,
-    "chartName": "Last 7 Days Registered Users Trend",
+    "yAxisName": "Revenue($)",
+    "originalTopRow": 16,
+    "chartName": "Sales Report",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "mobileLeftColumn": 36,
-    "xAxisName": "Date",
-    "originalBottomRow": 44,
-    "chartType": "LINE_CHART"
+    "mobileLeftColumn": 0,
+    "xAxisName": "Product Line",
+    "originalBottomRow": 47,
+    "chartType": "CUSTOM_ECHART"
 }

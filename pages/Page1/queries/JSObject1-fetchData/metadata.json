@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "setDefaultDate",
-    "fullyQualifiedName": "lastdate.setDefaultDate",
+    "name": "fetchData",
+    "fullyQualifiedName": "JSObject1.fetchData",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,15 +14,15 @@
       "userPermissions": []
     },
     "pageId": "Page1",
-    "collectionId": "Page1_lastdate",
+    "collectionId": "Page1_JSObject1",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "selfReferencingDataPaths": [],
       "jsArguments": []
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -31,13 +31,12 @@
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": [],
-    "createdAt": "2024-01-04T11:28:31Z"
+    "userPermissions": []
   },
-  "id": "Page1_lastdate.setDefaultDate",
+  "id": "Page1_JSObject1.fetchData",
   "deleted": false,
-  "gitSyncId": "65968d77dd20201102d4db76_6596965fdd20201102d4db92"
+  "gitSyncId": "65968d77dd20201102d4db76_659d131fdd20201102d4dc02"
 }

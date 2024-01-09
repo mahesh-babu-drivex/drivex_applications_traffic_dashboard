@@ -1,0 +1,20 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Page1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "option",
+        "value": "{\n  title: {\n    text: 'Last Seven Days Trend'\n  },\n  tooltip: {\n    trigger: 'axis'\n  },\n  legend: {\n    data: ['Total Users', 'New Users']\n  },\n  grid: {\n    left: '3%',\n    right: '4%',\n    bottom: '7%',\n    containLabel: true\n  },\n  toolbox: {\n    feature: {\n      saveAsImage: {}\n    }\n  },\n  xAxis: {\n    type: 'category',\n    boundaryGap: true,\n    data: JSObject1.fetchData().dates\n  },\n  yAxis: {\n    type: 'value'\n  },\n  series: [{\n    name: 'New Users',\n    type: 'line',\n    data: JSObject1.fetchData().new_users,\n    label: {\n      show: true,\n      position: 'top'\n    }\n  }, {\n    name: 'Total Users',\n    type: 'line',\n    data: JSObject1.fetchData().total_users,\n    label: {\n      show: true,\n      position: 'top'\n    }\n  }]\n}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Page1_JSObject1",
+  "deleted": false,
+  "gitSyncId": "65968d77dd20201102d4db76_659d0fa6dd20201102d4dbfc"
+}

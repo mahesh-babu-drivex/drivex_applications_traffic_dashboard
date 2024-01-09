@@ -9,7 +9,7 @@
         "label"
     ],
     "topRow": 0,
-    "bottomRow": 5,
+    "bottomRow": 4,
     "parentRowSpace": 10,
     "type": "TEXT_WIDGET",
     "hideCard": false,
@@ -30,9 +30,9 @@
     "text": "Website",
     "key": "5xmesk25y2",
     "isDeprecated": false,
-    "rightColumn": 41,
+    "rightColumn": 64,
     "textAlign": "CENTER",
-    "dynamicHeight": "AUTO_HEIGHT",
+    "dynamicHeight": "FIXED",
     "widgetId": "vfjwo027ha",
     "minWidth": 450,
     "isVisible": true,
@@ -48,11 +48,9 @@
     "isLoading": false,
     "mobileTopRow": 2,
     "responsiveBehavior": "fill",
-    "originalTopRow": 0,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 0,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 4,
     "fontSize": "1.875rem",
     "minDynamicHeight": 4
 }

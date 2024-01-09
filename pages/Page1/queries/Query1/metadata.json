@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "totaluserswebsite",
+    "name": "Query1",
     "datasource": {
       "name": "website",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT SUM(totalusers) \nFROM website_dashboard.traffic_report\nWHERE TO_DATE(date, 'YYYYMMDD') = CURRENT_DATE - INTERVAL '1 day';\n",
+      "body": "SELECT DATE(date) as date,\n       SUM(totalusers) as \"total_users\",\n       SUM(newusers) as \"new_users\"\nFROM website_dashboard.traffic_report\nWHERE TO_DATE(date, 'YYYYMMDD') >= CURRENT_DATE - INTERVAL '8 day' -- Updated to 8 days ago to exclude today\n  AND TO_DATE(date, 'YYYYMMDD') < CURRENT_DATE - INTERVAL '0 day' -- Up to yesterday\n\tGROUP BY date\nORDER BY date;\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,9 +36,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-01-08T12:45:47Z"
+    "createdAt": "2024-01-09T09:19:42Z"
   },
-  "id": "Page1_totaluserswebsite",
+  "id": "Page1_Query1",
   "deleted": false,
-  "gitSyncId": "65968d77dd20201102d4db76_659bee7bdd20201102d4dbdd"
+  "gitSyncId": "65968d77dd20201102d4db76_659d0faedd20201102d4dbfe"
 }

@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 850,
+          "bottomRow": 1292,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -29,8 +29,8 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Page1_last7daystrendwebsite",
-              "name": "last7daystrendwebsite",
+              "id": "Page1_Query1",
+              "name": "Query1",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
@@ -49,30 +49,27 @@
           ],
           [
             {
-              "id": "Page1_firstday.setDefaultDate",
-              "name": "firstday.setDefaultDate",
-              "collectionId": "Page1_firstday",
+              "id": "Page1_JSObject1.fetchData",
+              "name": "JSObject1.fetchData",
+              "collectionId": "Page1_JSObject1",
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "function () {\n  const today = new Date();\n  const firstDayOfThisMonth = new Date(today.getFullYear(), today.getMonth(), 1);\n  const firstDayOfLastMonth = new Date(today.getFullYear(), today.getMonth() - 1, 1);\n  const lastMonthFirstDate = `${firstDayOfLastMonth.getFullYear()}-${(firstDayOfLastMonth.getMonth() + 1).toString().padStart(2, '0')}-01`;\n  return lastMonthFirstDate;\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_lastdate.setDefaultDate",
-              "name": "lastdate.setDefaultDate",
-              "collectionId": "Page1_lastdate",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "function () {\n  const today = new Date();\n  const firstDayOfThisMonth = new Date(today.getFullYear(), today.getMonth(), 1);\n  const lastDayOfLastMonth = new Date(today.getFullYear(), today.getMonth(), 0);\n  const lastMonthLastDate = `${lastDayOfLastMonth.getFullYear()}-${(lastDayOfLastMonth.getMonth() + 1).toString().padStart(2, '0')}-${lastDayOfLastMonth.getDate()}`;\n  return lastMonthLastDate;\n}"
+                "function () {\n  const inputData = Query1.data;\n  const dates = [];\n  const totalUsers = [];\n  const newUsers = [];\n  inputData.forEach(item => {\n    dates.push(item.date);\n    totalUsers.push(Number(item.total_users));\n    newUsers.push(Number(item.new_users));\n  });\n  const transformedData = {\n    dates: dates,\n    total_users: totalUsers,\n    new_users: newUsers\n  };\n  return transformedData;\n}"
               ],
               "timeoutInMillisecond": 10000
             },
             {
               "id": "Page1_newusersdms",
               "name": "newusersdms",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_newuserswebsite",
+              "name": "newuserswebsite",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
@@ -92,19 +89,6 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Page1_newuserswebsite",
-              "name": "newuserswebsite",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "DatePicker1.formattedDate",
-                "DatePicker2.formattedDate"
-              ],
               "timeoutInMillisecond": 10000
             }
           ]

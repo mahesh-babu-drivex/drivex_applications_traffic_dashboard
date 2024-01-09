@@ -1,1 +1,3 @@
-SELECT  count (DISTINCT phone)  from website_dashboard.website_users1
+SELECT SUM(totalusers) 
+FROM website_dashboard.traffic_report
+WHERE TO_DATE(date, 'YYYYMMDD') = CURRENT_DATE - INTERVAL '1 day';
