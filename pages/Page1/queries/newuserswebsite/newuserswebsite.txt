@@ -1,0 +1,5 @@
+SELECT COUNT(DISTINCT phone) as phone_count
+FROM website_dashboard.website_users1
+WHERE 
+    TO_CHAR(createdat::timestamp, 'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') >= TO_CHAR('{{DatePicker1.formattedDate}}'::timestamp, 'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"')
+    AND TO_CHAR(createdat::timestamp, 'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') <= TO_CHAR('{{DatePicker2.formattedDate}}'::timestamp, 'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"');

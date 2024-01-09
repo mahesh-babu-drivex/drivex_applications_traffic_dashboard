@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 380,
+          "bottomRow": 850,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -26,7 +26,89 @@
           "dynamicBindingPathList": [],
           "leftColumn": 0
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Page1_last7daystrendwebsite",
+              "name": "last7daystrendwebsite",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_totalusers_procx",
+              "name": "totalusers_procx",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_firstday.setDefaultDate",
+              "name": "firstday.setDefaultDate",
+              "collectionId": "Page1_firstday",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "function () {\n  const today = new Date();\n  const firstDayOfThisMonth = new Date(today.getFullYear(), today.getMonth(), 1);\n  const firstDayOfLastMonth = new Date(today.getFullYear(), today.getMonth() - 1, 1);\n  const lastMonthFirstDate = `${firstDayOfLastMonth.getFullYear()}-${(firstDayOfLastMonth.getMonth() + 1).toString().padStart(2, '0')}-01`;\n  return lastMonthFirstDate;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_lastdate.setDefaultDate",
+              "name": "lastdate.setDefaultDate",
+              "collectionId": "Page1_lastdate",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "function () {\n  const today = new Date();\n  const firstDayOfThisMonth = new Date(today.getFullYear(), today.getMonth(), 1);\n  const lastDayOfLastMonth = new Date(today.getFullYear(), today.getMonth(), 0);\n  const lastMonthLastDate = `${lastDayOfLastMonth.getFullYear()}-${(lastDayOfLastMonth.getMonth() + 1).toString().padStart(2, '0')}-${lastDayOfLastMonth.getDate()}`;\n  return lastMonthLastDate;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_newusersdms",
+              "name": "newusersdms",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_totalusersdms",
+              "name": "totalusersdms",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_totaluserswebsite",
+              "name": "totaluserswebsite",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_newuserswebsite",
+              "name": "newuserswebsite",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "DatePicker1.formattedDate",
+                "DatePicker2.formattedDate"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "Page1",

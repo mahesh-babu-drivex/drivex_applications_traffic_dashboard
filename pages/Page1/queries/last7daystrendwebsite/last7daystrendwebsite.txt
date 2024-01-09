@@ -1,0 +1,6 @@
+SELECT DATE(createdat) as "x",
+       COUNT(DISTINCT phone) as "y"
+FROM website_dashboard.website_users1
+WHERE createdat >= CURRENT_DATE - INTERVAL '7 day'
+GROUP BY "x"
+ORDER BY "x";

@@ -1,0 +1,3 @@
+SELECT COUNT(*)
+FROM googlesheets.mdms_dealer
+WHERE created_on >= CURRENT_TIMESTAMP - INTERVAL '183 day';

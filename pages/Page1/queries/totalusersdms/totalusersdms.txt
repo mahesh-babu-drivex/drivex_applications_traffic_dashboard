@@ -1,0 +1,1 @@
+SELECT count(DISTINCT dealer_id)  from googlesheets.mdms_dealer where active='1'
