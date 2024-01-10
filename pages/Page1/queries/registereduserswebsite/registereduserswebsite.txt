@@ -1,3 +1,3 @@
-SELECT COUNT(DISTINCT phone) as phone_count
+SELECT DISTINCT count(phone)  
 FROM website_dashboard.website_users1
 WHERE createdat >= CURRENT_TIMESTAMP - INTERVAL '1 day';
