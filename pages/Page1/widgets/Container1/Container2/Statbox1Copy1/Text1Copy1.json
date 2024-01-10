@@ -25,7 +25,7 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "New Users",
+    "text": "Firts Time Users",
     "key": "mf60yemoak",
     "isDeprecated": false,
     "rightColumn": 35,
