@@ -45,10 +45,24 @@ export default {
   xAxis: {
     type: 'category',
     boundaryGap: true,
-    data: this.fetchData().dates
+    data: this.fetchData().dates,
+				axisLabel: {
+      show: true,
+       position: 'top' ,
+				fontSize:16,
+				      fontWeight: 'bold' 
+// You can adjust the position as needed
+   }
   },
   yAxis: {
-    type: 'value'
+    type: 'value',
+				axisLabel: {
+      show: true,
+       position: 'top' ,
+				fontSize:16,
+				      fontWeight: 'bold' 
+// You can adjust the position as needed
+   }
 		 // axisLabel: {
       // show: true // Set to true to display labels on the axis
       // // You can add more formatting options here if needed
@@ -61,9 +75,12 @@ export default {
       type: 'line',
       // stack: 'Total',
       data: this.fetchData().new_users,
-			label: {
+					label: {
       show: true,
-       position: 'top' // You can adjust the position as needed
+       position: 'top' ,
+				fontSize:16,
+				      fontWeight: 'bold' 
+// You can adjust the position as needed
    }
     },
     {
@@ -73,7 +90,10 @@ export default {
       data: this.fetchData().total_users,
 			label: {
       show: true,
-       position: 'top' // You can adjust the position as needed
+       position: 'top' ,
+				fontSize:16,
+				      fontWeight: 'bold' 
+// You can adjust the position as needed
    }
     }
   ]
