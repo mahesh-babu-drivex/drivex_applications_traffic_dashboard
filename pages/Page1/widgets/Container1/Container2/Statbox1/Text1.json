@@ -25,10 +25,10 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "Total Traffic",
+    "text": "Total Users",
     "key": "mf60yemoak",
     "isDeprecated": false,
-    "rightColumn": 38,
+    "rightColumn": 35,
     "textAlign": "CENTER",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "a1rfae2j7e",
@@ -50,7 +50,7 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 1,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 5,
+    "originalBottomRow": 4,
     "fontSize": "1rem",
     "minDynamicHeight": 4
 }
