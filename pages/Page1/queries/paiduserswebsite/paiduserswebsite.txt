@@ -1,0 +1,4 @@
+SELECT COUNT(*) AS paymentstatus_count
+FROM website_dashboard.website_payments
+WHERE paymentstatus = 1
+  AND paymentcreateddate>= CURRENT_TIMESTAMP - INTERVAL '1 day';

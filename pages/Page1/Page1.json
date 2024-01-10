@@ -39,6 +39,22 @@
           ],
           [
             {
+              "id": "Page1_paiduserswebsite",
+              "name": "paiduserswebsite",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_registereduserswebsite",
+              "name": "registereduserswebsite",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Page1_totalusers_procx",
               "name": "totalusers_procx",
               "confirmBeforeExecute": false,
