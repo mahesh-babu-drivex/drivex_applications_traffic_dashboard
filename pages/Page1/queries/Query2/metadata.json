@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT (CURRENT_DATE - INTERVAL '1 day')::date AS yesterday_date;\n",
+      "body": "SELECT to_char((CURRENT_DATE - INTERVAL '1 day')::date, 'DD-MM-YYYY') AS yesterday_date;\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
