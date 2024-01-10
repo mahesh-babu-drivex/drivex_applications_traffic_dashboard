@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT  count(DISTINCT userid)    from raw_live_data.usertable\n",
+      "body": "\tSELECT  count(DISTINCT userid)    from raw_live_data.usertable\n\tWHERE active='true'",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
