@@ -29,7 +29,7 @@
     "text": "{{registereduserswebsite.data[0]?.count || 0}}",
     "key": "mf60yemoak",
     "isDeprecated": false,
-    "rightColumn": 33,
+    "rightColumn": 32,
     "textAlign": "CENTER",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "i6u1yjqhsn",

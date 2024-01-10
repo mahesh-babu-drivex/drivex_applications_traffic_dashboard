@@ -21,7 +21,7 @@
     "animateLoading": true,
     "parentColumnSpace": 16.4375,
     "dynamicTriggerPathList": [],
-    "leftColumn": 27,
+    "leftColumn": 0,
     "dynamicBindingPathList": [{"key": "borderRadius"}],
     "children": [{
         "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",

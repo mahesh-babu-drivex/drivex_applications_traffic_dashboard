@@ -9,7 +9,7 @@
         "label"
     ],
     "topRow": 0,
-    "bottomRow": 4,
+    "bottomRow": 5,
     "type": "TEXT_WIDGET",
     "hideCard": false,
     "mobileRightColumn": 37,
@@ -25,10 +25,10 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "Total Traffic",
+    "text": "Total Traffic(Per day)",
     "key": "mf60yemoak",
     "isDeprecated": false,
-    "rightColumn": 35,
+    "rightColumn": 38,
     "textAlign": "CENTER",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "a1rfae2j7e",
@@ -50,7 +50,7 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 1,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 4,
+    "originalBottomRow": 7,
     "fontSize": "1rem",
     "minDynamicHeight": 4
 }
