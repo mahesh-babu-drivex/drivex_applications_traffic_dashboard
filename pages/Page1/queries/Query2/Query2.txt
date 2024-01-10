@@ -1,0 +1,1 @@
+SELECT (CURRENT_DATE - INTERVAL '1 day')::date AS yesterday_date;

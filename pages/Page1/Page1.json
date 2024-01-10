@@ -68,6 +68,14 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "Page1_Query2",
+              "name": "Query2",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Page1_newusersdms",
               "name": "newusersdms",
               "confirmBeforeExecute": false,
