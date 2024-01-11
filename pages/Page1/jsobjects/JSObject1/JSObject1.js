@@ -8,7 +8,7 @@ export default {
 
     // Populate arrays with data
     inputData.forEach((item) => {
-      dates.push(item.date);
+      dates.push(item.x);
       totalUsers.push(Number(item.total_users));
       newUsers.push(Number(item.new_users));
     });

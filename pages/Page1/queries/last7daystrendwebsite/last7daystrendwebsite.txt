@@ -1,4 +1,4 @@
-SELECT DATE(date) as "x",
+SELECT TO_CHAR(DATE(date),'DD-MM-YYYY') as "x",
        sum(newusers) as "y"
 FROM website_dashboard.traffic_report
 WHERE TO_DATE(date, 'YYYYMMDD') >= CURRENT_DATE - INTERVAL '8 day' -- Updated to 8 days ago to exclude today

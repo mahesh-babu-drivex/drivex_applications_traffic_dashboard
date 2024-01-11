@@ -71,7 +71,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "function () {\n  const inputData = Query1.data;\n  const dates = [];\n  const totalUsers = [];\n  const newUsers = [];\n  inputData.forEach(item => {\n    dates.push(item.date);\n    totalUsers.push(Number(item.total_users));\n    newUsers.push(Number(item.new_users));\n  });\n  const transformedData = {\n    dates: dates,\n    total_users: totalUsers,\n    new_users: newUsers\n  };\n  return transformedData;\n}"
+                "function () {\n  const inputData = Query1.data;\n  const dates = [];\n  const totalUsers = [];\n  const newUsers = [];\n  inputData.forEach(item => {\n    dates.push(item.x);\n    totalUsers.push(Number(item.total_users));\n    newUsers.push(Number(item.new_users));\n  });\n  const transformedData = {\n    dates: dates,\n    total_users: totalUsers,\n    new_users: newUsers\n  };\n  return transformedData;\n}"
               ],
               "timeoutInMillisecond": 10000
             },

@@ -1,4 +1,4 @@
-SELECT DATE(date) as date,
+SELECT  TO_CHAR(DATE(date),'DD-MM-YYYY') as "x",
        SUM(totalusers) as "total_users",
        SUM(newusers) as "new_users"
 FROM website_dashboard.traffic_report
