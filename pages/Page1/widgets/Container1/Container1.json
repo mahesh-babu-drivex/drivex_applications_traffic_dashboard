@@ -12,7 +12,7 @@
         "group"
     ],
     "topRow": 15,
-    "bottomRow": 70,
+    "bottomRow": 75,
     "parentRowSpace": 10,
     "type": "CONTAINER_WIDGET",
     "hideCard": false,
@@ -32,7 +32,7 @@
         "widgetName": "Canvas2",
         "displayName": "Canvas",
         "topRow": 0,
-        "bottomRow": 550,
+        "bottomRow": 600,
         "parentRowSpace": 1,
         "type": "CANVAS_WIDGET",
         "canExtend": false,
