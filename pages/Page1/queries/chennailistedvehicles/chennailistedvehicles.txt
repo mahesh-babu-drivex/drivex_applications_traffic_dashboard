@@ -1,0 +1,22 @@
+{{
+  {
+		"priceRange": [],
+  "vehicleTypes": [],
+  "brandNames": [],
+  "modelNames": [],
+  "variantNames": [],
+  "colors": [],
+  "ownerships": [],
+  "kmDriven": "",
+  "manufactureYear": "",
+  "engineCC": [],
+  "city": "Chennai",
+  "pinCode": "",
+  "isTVSCertified": false,
+  "currentPage": 0,
+  "pageSize": 10,
+  "sortBy": "Listings: New to Old",
+  "userID": ""
+}
+
+}}

@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1292,
+          "bottomRow": 700,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -84,11 +84,33 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_newusersdms",
-              "name": "newusersdms",
+              "id": "Page1_banglore_listed_vehicles",
+              "name": "banglore_listed_vehicles",
               "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "\n  {\n\t\t\"priceRange\": [],\n  \"vehicleTypes\": [],\n  \"brandNames\": [],\n  \"modelNames\": [],\n  \"variantNames\": [],\n  \"colors\": [],\n  \"ownerships\": [],\n  \"kmDriven\": \"\",\n  \"manufactureYear\": \"\",\n  \"engineCC\": [],\n  \"city\": \"Bangalore\",\n  \"pinCode\": \"\",\n  \"isTVSCertified\": false,\n  \"currentPage\": 0,\n  \"pageSize\": 10,\n  \"sortBy\": \"Listings: New to Old\",\n  \"userID\": \"\"\n}\n\n"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_chennailistedvehicles",
+              "name": "chennailistedvehicles",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "\n  {\n\t\t\"priceRange\": [],\n  \"vehicleTypes\": [],\n  \"brandNames\": [],\n  \"modelNames\": [],\n  \"variantNames\": [],\n  \"colors\": [],\n  \"ownerships\": [],\n  \"kmDriven\": \"\",\n  \"manufactureYear\": \"\",\n  \"engineCC\": [],\n  \"city\": \"Chennai\",\n  \"pinCode\": \"\",\n  \"isTVSCertified\": false,\n  \"currentPage\": 0,\n  \"pageSize\": 10,\n  \"sortBy\": \"Listings: New to Old\",\n  \"userID\": \"\"\n}\n\n"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_coimbatorelistedvehicles",
+              "name": "coimbatorelistedvehicles",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "\n  {\n\t\t\"priceRange\": [],\n  \"vehicleTypes\": [],\n  \"brandNames\": [],\n  \"modelNames\": [],\n  \"variantNames\": [],\n  \"colors\": [],\n  \"ownerships\": [],\n  \"kmDriven\": \"\",\n  \"manufactureYear\": \"\",\n  \"engineCC\": [],\n  \"city\": \"Coimbatore\",\n  \"pinCode\": \"\",\n  \"isTVSCertified\": false,\n  \"currentPage\": 0,\n  \"pageSize\": 10,\n  \"sortBy\": \"Listings: New to Old\",\n  \"userID\": \"\"\n}\n\n"
+              ],
               "timeoutInMillisecond": 10000
             },
             {
