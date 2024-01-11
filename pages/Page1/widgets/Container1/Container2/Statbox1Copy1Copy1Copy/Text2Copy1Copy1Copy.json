@@ -8,7 +8,7 @@
         "paragraph",
         "label"
     ],
-    "topRow": 5,
+    "topRow": 4,
     "bottomRow": 9,
     "type": "TEXT_WIDGET",
     "hideCard": false,
@@ -29,7 +29,7 @@
     "text": "{{paiduserswebsite.data[0]?.paymentstatus_count || 0}}",
     "key": "mf60yemoak",
     "isDeprecated": false,
-    "rightColumn": 33,
+    "rightColumn": 32,
     "textAlign": "CENTER",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "c3bpt6k78x",
@@ -47,11 +47,11 @@
     "isLoading": false,
     "mobileTopRow": 4,
     "responsiveBehavior": "fill",
-    "originalTopRow": 6,
+    "originalTopRow": 4,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 1,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 10,
-    "fontSize": "1.25rem",
+    "originalBottomRow": 9,
+    "fontSize": "1.875rem",
     "minDynamicHeight": 4
 }
