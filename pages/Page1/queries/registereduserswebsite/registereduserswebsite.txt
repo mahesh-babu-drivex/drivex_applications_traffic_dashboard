@@ -1,3 +1,4 @@
-SELECT DISTINCT count(phone)  
+SELECT distinct count(phone)
 FROM website_dashboard.website_users1
-WHERE createdat >= CURRENT_TIMESTAMP - INTERVAL '1 day';
+WHERE createdat >= (CURRENT_DATE - INTERVAL '1 day')
+  AND createdat < CURRENT_DATE
