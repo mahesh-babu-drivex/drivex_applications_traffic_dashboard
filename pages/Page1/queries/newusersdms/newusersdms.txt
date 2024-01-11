@@ -1,3 +1,4 @@
-SELECT count(*)
+SELECT distinct count(dealer_id)
 FROM googlesheets.mdms_dealer
-where created_on>=CURRENT_DATE-INTERVAL '183 day'
+where created_on>=CURRENT_DATE-INTERVAL '183 day' 
+and active='true'

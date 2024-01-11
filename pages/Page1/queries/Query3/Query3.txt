@@ -1,0 +1,5 @@
+SELECT COUNT(DISTINCT dealer_id)
+FROM googlesheets.mdms_dealer
+WHERE created_on >= CURRENT_DATE - INTERVAL '183 day'
+  AND active = 'true'
+  AND CAST(dealer_id AS TEXT) NOT LIKE '9%';

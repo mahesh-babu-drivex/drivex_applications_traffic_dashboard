@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "totalusersdms",
+    "name": "Query3",
     "datasource": {
       "name": "centraldb",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT count(DISTINCT dealer_id)  from googlesheets.mdms_dealer where active='true' and CAST(dealer_id AS TEXT) NOT LIKE '9%';",
+      "body": "SELECT COUNT(DISTINCT dealer_id)\nFROM googlesheets.mdms_dealer\nWHERE created_on >= CURRENT_DATE - INTERVAL '183 day'\n  AND active = 'true'\n  AND CAST(dealer_id AS TEXT) NOT LIKE '9%';\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
@@ -35,10 +35,9 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": [],
-    "createdAt": "2024-01-08T09:07:17Z"
+    "userPermissions": []
   },
-  "id": "Page1_totalusersdms",
+  "id": "Page1_Query3",
   "deleted": false,
-  "gitSyncId": "65968d77dd20201102d4db76_659bbb45dd20201102d4dbcb"
+  "gitSyncId": "65968d77dd20201102d4db76_659f9cbddd20201102d4dc8d"
 }

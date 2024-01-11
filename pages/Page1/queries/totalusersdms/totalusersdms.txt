@@ -1,1 +1,1 @@
-SELECT count(DISTINCT dealer_id)  from googlesheets.mdms_dealer where active='1'
+SELECT count(DISTINCT dealer_id)  from googlesheets.mdms_dealer where active='true' and CAST(dealer_id AS TEXT) NOT LIKE '9%';

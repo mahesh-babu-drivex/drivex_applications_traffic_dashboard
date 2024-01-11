@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT count(*)\nFROM googlesheets.mdms_dealer\nwhere created_on>=CURRENT_DATE-INTERVAL '183 day'",
+      "body": "SELECT distinct count(dealer_id)\nFROM googlesheets.mdms_dealer\nwhere created_on>=CURRENT_DATE-INTERVAL '183 day' \nand active='true'",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
