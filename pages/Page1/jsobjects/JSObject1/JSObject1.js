@@ -23,17 +23,23 @@ export default {
   },
 	option : {
   title: {
-    text: 'Last Seven Days Trend'
+    text: 'Last Seven Days Trend',
+     left: 'center', // Center the title horizontally
+    top: '0%'
+
   },
   tooltip: {
     trigger: 'axis'
   },
   legend: {
-    data: ['Total Users','New Users']
+    data: ['Total Users','New Users'],
+		 orient: 'vertical', // Set the orientation to vertical
+    right: '5%',        // Adjust the right distance as needed
+    top: 'top'
   },
   grid: {
     left: '3%',
-    right: '4%',
+    right: '9%',
     bottom: '7%',
     containLabel: true
   },
@@ -45,6 +51,11 @@ export default {
   xAxis: {
     type: 'category',
     boundaryGap: true,
+		name:'Date',
+		nameTextStyle: {
+      fontSize: 20, // Adjust the font size for the x-axis title
+      fontWeight: 'bold' // Make the x-axis title bold
+    },
     data: this.fetchData().dates,
 				axisLabel: {
       show: true,
@@ -56,11 +67,17 @@ export default {
   },
   yAxis: {
     type: 'value',
+		name:'Count',
+		nameTextStyle: {
+      fontSize: 20, // Adjust the font size for the x-axis title
+      fontWeight: 'bold' // Make the x-axis title bold
+    },
 				axisLabel: {
       show: true,
-       position: 'top' ,
 				fontSize:16,
-				      fontWeight: 'bold' 
+				      fontWeight: 'bold' ,
+					      position: 'insideLeft'// Place the title inside the left of the axis labels
+
 // You can adjust the position as needed
    }
 		 // axisLabel: {
