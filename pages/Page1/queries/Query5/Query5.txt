@@ -10,7 +10,7 @@ JOIN
   googlesheets.uvd_veh_valu_tran   uv ON md.dealer_id = uv.dealer_id
 WHERE
     md.active = '1'
-    AND uv.veh_status in ('1','2')
+    AND uv.veh_status in ('1')
 	   AND CAST(md.dealer_id AS TEXT) NOT LIKE '5%'
 	   	   AND CAST(md.dealer_id AS TEXT) NOT LIKE '9%'
 
