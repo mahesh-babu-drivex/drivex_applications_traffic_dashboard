@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT count(DISTINCT dealer_id)  from googlesheets.mdms_dealer where active='true' and CAST(dealer_id AS TEXT) NOT LIKE '9%';",
+      "body": "SELECT count(DISTINCT dealer_id)  from googlesheets.mdms_dealer where active='true' and CAST(dealer_id AS TEXT) NOT LIKE '9%' and cast(dealer_id as text) not like '5%';",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
