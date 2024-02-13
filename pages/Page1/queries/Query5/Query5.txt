@@ -4,8 +4,7 @@ SELECT
 	when md.dealer_id::text like '3%' then 'COCO'
 	else null
 	end as Channel,
-    md.dealer_id,
-    md.dealer_name,
+    md.dealership_name,
     md.city,
     COUNT(uv.vehicle_id) AS floor_stock_count
 FROM
@@ -21,6 +20,6 @@ WHERE
     AND CAST(md.dealer_id AS TEXT) NOT LIKE '9%'
     AND dv."IS_INTERNET_SALE" = 'true'
 GROUP BY
-    md.dealer_id, md.dealer_name, md.city
+    md.dealer_id, md.dealership_name, md.city
 ORDER BY
     channel,md.city;
