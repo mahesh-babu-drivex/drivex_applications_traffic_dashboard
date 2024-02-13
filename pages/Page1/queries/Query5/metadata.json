@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT\n    md.dealer_id,\n\tmd.dealer_name,\n\tmd.city,\n\t\n    COUNT(uv.vehicle_id) AS floor_stock_count\nFROM\n googlesheets.mdms_dealer    md\nJOIN\n  googlesheets.uvd_veh_valu_tran   uv ON md.dealer_id = uv.dealer_id\nWHERE\n    md.active = '1'\n    AND uv.veh_status in ('1')\n\t   AND CAST(md.dealer_id AS TEXT) NOT LIKE '5%'\n\t   \t   AND CAST(md.dealer_id AS TEXT) NOT LIKE '9%'\n\n\nGROUP BY\n    md.dealer_id,md.dealer_name,md.city\norder by dealer_id\n",
+      "body": "SELECT\n\tcase\n\twhen md.dealer_id::text like \t'1%'then 'FOFO'\n\twhen md.dealer_id::text like '3%' then 'COCO'\n\telse null\n\tend as Channel,\n    md.dealer_id,\n    md.dealer_name,\n    md.city,\n    COUNT(uv.vehicle_id) AS floor_stock_count\nFROM\n    googlesheets.mdms_dealer md\nJOIN\n    googlesheets.uvd_veh_valu_tran uv ON md.dealer_id = uv.dealer_id\nJOIN\n    googlesheets.dms_vehicles dv ON uv.vehicle_id = dv.\"VEHICLE_ID\"\nWHERE\n    md.active = '1'\n    AND uv.veh_status IN ('1')\n    AND CAST(md.dealer_id AS TEXT) NOT LIKE '5%'\n    AND CAST(md.dealer_id AS TEXT) NOT LIKE '9%'\n    AND dv.\"IS_INTERNET_SALE\" = 'true'\nGROUP BY\n    md.dealer_id, md.dealer_name, md.city\nORDER BY\n    channel,md.city;\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
