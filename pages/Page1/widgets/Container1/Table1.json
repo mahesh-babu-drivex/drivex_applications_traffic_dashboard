@@ -16,7 +16,8 @@
         {"key": "primaryColumns.city.computedValue"},
         {"key": "primaryColumns.floor_stock_count.computedValue"},
         {"key": "primaryColumns.channel.computedValue"},
-        {"key": "primaryColumns.dealership_name.computedValue"}
+        {"key": "primaryColumns.dealership_name.computedValue"},
+        {"key": "primaryColumns.invoice_count.computedValue"}
     ],
     "needsHeightForContent": true,
     "leftColumn": 13,
@@ -58,7 +59,7 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1707818012292,
+    "columnUpdatedAt": 1708003794950,
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 86,
     "widgetName": "Table1",
@@ -67,7 +68,8 @@
         "channel",
         "dealership_name",
         "city",
-        "floor_stock_count"
+        "floor_stock_count",
+        "invoice_count"
     ],
     "dynamicPropertyPathList": [],
     "compactMode": "DEFAULT",
@@ -138,6 +140,33 @@
             "cellBackground": "",
             "verticalAlignment": "CENTER"
         },
+        "invoice_count": {
+            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"invoice_count\"]))}}",
+            "isEditable": false,
+            "alias": "invoice_count",
+            "enableSort": true,
+            "isSaveVisible": true,
+            "id": "invoice_count",
+            "isDisabled": false,
+            "allowSameOptionsInNewRow": true,
+            "validation": {},
+            "isCellVisible": true,
+            "isDerived": false,
+            "textSize": "0.875rem",
+            "allowCellWrapping": false,
+            "index": 4,
+            "isDiscardVisible": true,
+            "isVisible": true,
+            "label": "invoice_count",
+            "columnType": "number",
+            "horizontalAlignment": "CENTER",
+            "isCellEditable": false,
+            "width": 150,
+            "enableFilter": true,
+            "sticky": "",
+            "originalId": "invoice_count",
+            "verticalAlignment": "CENTER"
+        },
         "dealership_name": {
             "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"dealership_name\"]))}}",
             "isEditable": false,
@@ -203,7 +232,7 @@
     "textSize": "0.875rem",
     "widgetId": "ivs8zkemqx",
     "minWidth": 450,
-    "tableData": "{{Query5.data}}",
+    "tableData": "{{Query6.data}}",
     "label": "Data",
     "searchKey": "",
     "parentId": "46snetxyzt",

@@ -37,8 +37,8 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_Query5",
-              "name": "Query5",
+              "id": "Page1_Query6",
+              "name": "Query6",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],

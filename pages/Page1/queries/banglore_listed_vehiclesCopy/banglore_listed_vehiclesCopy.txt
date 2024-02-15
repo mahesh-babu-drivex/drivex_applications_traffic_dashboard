@@ -10,7 +10,7 @@
   "kmDriven": "",
   "manufactureYear": "",
   "engineCC": [],
-  "city": "",
+  "city": "Aruppukottai",
   "pinCode": "",
   "isTVSCertified": false,
   "currentPage": 0,
