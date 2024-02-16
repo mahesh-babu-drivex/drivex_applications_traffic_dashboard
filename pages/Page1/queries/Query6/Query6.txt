@@ -33,4 +33,4 @@ WHERE
 GROUP BY
     md.dealer_id, md.dealership_name, md.city, invoice_counts.invoice_count
 ORDER BY
-   invoice_count, channel, md.city;
+   invoice_count DESC, channel, md.city;
