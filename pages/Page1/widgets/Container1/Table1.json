@@ -20,7 +20,7 @@
         {"key": "primaryColumns.invoice_count.computedValue"}
     ],
     "needsHeightForContent": true,
-    "leftColumn": 13,
+    "leftColumn": 0,
     "delimiter": ",",
     "defaultSelectedRowIndex": 0,
     "flexVerticalAlignment": "start",
@@ -75,7 +75,12 @@
     "compactMode": "DEFAULT",
     "displayName": "Table",
     "bottomRow": 91,
-    "columnWidthMap": {},
+    "columnWidthMap": {
+        "city": 394,
+        "channel": 362,
+        "dealership_name": 455,
+        "floor_stock_count": 276
+    },
     "parentRowSpace": 10,
     "hideCard": false,
     "mobileRightColumn": 17,
@@ -228,7 +233,7 @@
     "key": "xzutryfsj6",
     "canFreezeColumn": true,
     "isDeprecated": false,
-    "rightColumn": 53,
+    "rightColumn": 63,
     "textSize": "0.875rem",
     "widgetId": "ivs8zkemqx",
     "minWidth": 450,
