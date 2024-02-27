@@ -6,7 +6,7 @@
     "labelWidth": 5,
     "type": "DATE_PICKER_WIDGET2",
     "animateLoading": true,
-    "leftColumn": 44,
+    "leftColumn": 40,
     "dynamicBindingPathList": [
         {"key": "accentColor"},
         {"key": "borderRadius"},
@@ -33,7 +33,7 @@
     "dynamicPropertyPathList": [{"key": "defaultDate"}],
     "displayName": "DatePicker",
     "searchTags": ["calendar"],
-    "bottomRow": 7,
+    "bottomRow": 8,
     "shortcuts": false,
     "parentRowSpace": 10,
     "hideCard": false,

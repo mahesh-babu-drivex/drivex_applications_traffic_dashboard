@@ -31,7 +31,7 @@
     "text": "Website {{Query2.data[0].yesterday_date}}",
     "key": "5xmesk25y2",
     "isDeprecated": false,
-    "rightColumn": 41,
+    "rightColumn": 40,
     "textAlign": "CENTER",
     "dynamicHeight": "FIXED",
     "widgetId": "vfjwo027ha",
