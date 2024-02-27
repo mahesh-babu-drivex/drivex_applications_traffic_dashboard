@@ -1,0 +1,20 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject3",
+    "pageId": "Page1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "option",
+        "value": "{\n  title: {\n    text: 'Last Seven Days Trend',\n    left: 'center',\n    top: '0%'\n  },\n  tooltip: {\n    trigger: 'axis'\n  },\n  legend: {\n    data: ['Total Users', 'New Users'],\n    orient: 'vertical',\n    right: '5%',\n    top: 'top'\n  },\n  grid: {\n    left: '3%',\n    right: '9%',\n    bottom: '7%',\n    containLabel: true\n  },\n  toolbox: {\n    feature: {\n      saveAsImage: {}\n    }\n  },\n  xAxis: {\n    type: 'category',\n    boundaryGap: true,\n    name: 'Date',\n    nameTextStyle: {\n      fontSize: 20,\n      fontWeight: 'bold'\n    },\n    data: JSObject3.fetchData().dates,\n    axisLabel: {\n      show: true,\n      position: 'top',\n      fontSize: 16,\n      fontWeight: 'bold'\n    }\n  },\n  yAxis: [{\n    type: 'value',\n    name: 'Count',\n    nameTextStyle: {\n      fontSize: 20,\n      fontWeight: 'bold'\n    },\n    axisLabel: {\n      show: true,\n      fontSize: 16,\n      fontWeight: 'bold',\n      position: 'insideLeft'\n    }\n  }, {\n    type: 'category',\n    name: 'Category Axis',\n    nameTextStyle: {\n      fontSize: 20,\n      fontWeight: 'bold'\n    },\n    axisLabel: {\n      show: true,\n      fontSize: 16,\n      fontWeight: 'bold',\n      position: 'insideRight'\n    },\n    data: ['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5']\n  }],\n  series: [{\n    name: 'New Users',\n    type: 'line',\n    data: JSObject3.fetchData().new_users,\n    label: {\n      show: true,\n      position: 'top',\n      fontSize: 16,\n      fontWeight: 'bold'\n    }\n  }, {\n    name: 'Total Users',\n    type: 'line',\n    data: JSObject3.fetchData().total_users,\n    label: {\n      show: true,\n      position: 'top',\n      fontSize: 16,\n      fontWeight: 'bold'\n    }\n  }]\n}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Page1_JSObject3",
+  "deleted": false,
+  "gitSyncId": "65968d77dd20201102d4db76_65cf35778ff9714dc6fa76fd"
+}

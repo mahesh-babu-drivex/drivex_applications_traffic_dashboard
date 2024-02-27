@@ -29,7 +29,7 @@
         "widgetName": "Canvas6CopyCopy1Copy",
         "displayName": "Canvas",
         "topRow": 0,
-        "bottomRow": 110,
+        "bottomRow": 130,
         "parentRowSpace": 1,
         "type": "CANVAS_WIDGET",
         "canExtend": false,

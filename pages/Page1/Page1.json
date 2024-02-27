@@ -29,6 +29,17 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Page1_JSObject4.setDefaultDate",
+              "name": "JSObject4.setDefaultDate",
+              "collectionId": "Page1_JSObject4",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "function () {\n  const today = new Date();\n  const yesterday = new Date(today);\n  yesterday.setDate(today.getDate() - 1);\n  const yesterdayDate = `${yesterday.getFullYear()}-${(yesterday.getMonth() + 1).toString().padStart(2, '0')}-${yesterday.getDate().toString().padStart(2, '0')}`;\n  return yesterdayDate;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Page1_Query1",
               "name": "Query1",
               "confirmBeforeExecute": false,
@@ -46,22 +57,6 @@
             }
           ],
           [
-            {
-              "id": "Page1_paiduserswebsite",
-              "name": "paiduserswebsite",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_registereduserswebsite",
-              "name": "registereduserswebsite",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
             {
               "id": "Page1_totalusers_procx",
               "name": "totalusers_procx",
@@ -122,19 +117,33 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_newuserswebsite",
-              "name": "newuserswebsite",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Page1_totalusersdms",
               "name": "totalusersdms",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_newuserswebsite",
+              "name": "newuserswebsite",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "DatePicker1.formattedDate"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_registereduserswebsite",
+              "name": "registereduserswebsite",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "DatePicker1.formattedDate"
+              ],
               "timeoutInMillisecond": 10000
             },
             {
@@ -142,7 +151,9 @@
               "name": "totaluserswebsite",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
-              "jsonPathKeys": [],
+              "jsonPathKeys": [
+                "DatePicker1.formattedDate"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]

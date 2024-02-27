@@ -1,4 +1,4 @@
-SELECT distinct count(phone)
+SELECT COUNT(DISTINCT phone)
 FROM website_dashboard.website_users2
-WHERE updatedat >= (CURRENT_DATE - INTERVAL '1 day')
- AND updatedat < CURRENT_DATE
+WHERE updatedat >= TO_TIMESTAMP('{{DatePicker1.formattedDate}}', 'DD/MM/YYYY')
+  AND updatedat < CURRENT_DATE;

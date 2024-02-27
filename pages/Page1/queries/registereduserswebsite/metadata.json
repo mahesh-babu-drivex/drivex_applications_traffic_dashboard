@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT distinct count(phone)\nFROM website_dashboard.website_users2\nWHERE updatedat >= (CURRENT_DATE - INTERVAL '1 day')\n AND updatedat < CURRENT_DATE\n",
+      "body": "SELECT COUNT(DISTINCT phone)\nFROM website_dashboard.website_users2\nWHERE updatedat >= TO_TIMESTAMP('{{DatePicker1.formattedDate}}', 'DD/MM/YYYY')\n  AND updatedat < CURRENT_DATE;\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -27,11 +27,17 @@
       ]
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "DatePicker1.formattedDate"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

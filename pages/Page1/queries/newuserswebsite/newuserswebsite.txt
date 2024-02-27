@@ -1,3 +1,5 @@
 SELECT SUM(newusers) 
 FROM website_dashboard.traffic_report
-WHERE TO_DATE(date, 'YYYYMMDD') = CURRENT_DATE - INTERVAL '1 day';
+--WHERE TO_DATE(date, 'YYYYMMDD') = CURRENT_DATE - INTERVAL '1 day';
+WHERE date::DATE >= TO_DATE('{{DatePicker1.formattedDate}}', 'DD/MM/YYYY')
+  AND date::DATE < CURRENT_DATE;
