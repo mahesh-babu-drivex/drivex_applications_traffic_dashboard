@@ -1,6 +1,6 @@
 export default {
   fetchData() {
-    const inputData = Query1.data;
+    const inputData = last7daystrendweb.data;
 
     const dates = [];
     const totalUsers = [];

@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "totalusersdms",
+    "name": "last7daystrendweb",
     "datasource": {
       "name": "centraldb",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT count(DISTINCT dealer_id)  from googlesheets.mdms_dealer where active='true' and CAST(dealer_id AS TEXT) NOT LIKE '9%' and cast(dealer_id as text) not like '5%' ;",
+      "body": "SELECT TO_CHAR(DATE(date),'DD-MM-YYYY') as \"x\",\n       sum(newusers) as \"y\"\nFROM dashboard_data.traffic_sources\nWHERE TO_DATE(date, 'YYYYMMDD') >= CURRENT_DATE - INTERVAL '8 day' -- Updated to 8 days ago to exclude today\n  AND TO_DATE(date, 'YYYYMMDD') < CURRENT_DATE - INTERVAL '0 day' -- Up to yesterday\nGROUP BY \"x\"\nORDER BY \"x\";",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,9 +36,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-01-08T09:07:17Z"
+    "createdAt": "2024-03-12T07:23:16Z"
   },
-  "id": "Page1_totalusersdms",
+  "id": "Page1_last7daystrendweb",
   "deleted": false,
-  "gitSyncId": "65968d77dd20201102d4db76_659bbb45dd20201102d4dbcb"
+  "gitSyncId": "65968d77dd20201102d4db76_65f002e4d72af66419ac98e9"
 }

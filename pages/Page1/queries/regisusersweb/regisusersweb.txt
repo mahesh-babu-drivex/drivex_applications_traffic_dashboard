@@ -1,0 +1,3 @@
+SELECT COUNT(DISTINCT phone)
+FROM dashboard_data.website_use
+WHERE updatedat::DATE = TO_DATE('{{DatePicker1.formattedDate}}', 'DD/MM/YYYY')

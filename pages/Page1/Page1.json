@@ -40,16 +40,16 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_Query1",
-              "name": "Query1",
+              "id": "Page1_Query6",
+              "name": "Query6",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_Query6",
-              "name": "Query6",
+              "id": "Page1_last7daystrendweb",
+              "name": "last7daystrendweb",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
@@ -74,7 +74,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "function () {\n  const inputData = Query1.data;\n  const dates = [];\n  const totalUsers = [];\n  const newUsers = [];\n  inputData.forEach(item => {\n    dates.push(item.x);\n    totalUsers.push(Number(item.total_users));\n    newUsers.push(Number(item.new_users));\n  });\n  const transformedData = {\n    dates: dates,\n    total_users: totalUsers,\n    new_users: newUsers\n  };\n  return transformedData;\n}"
+                "function () {\n  const inputData = last7daystrendweb.data;\n  const dates = [];\n  const totalUsers = [];\n  const newUsers = [];\n  inputData.forEach(item => {\n    dates.push(item.x);\n    totalUsers.push(Number(item.total_users));\n    newUsers.push(Number(item.new_users));\n  });\n  const transformedData = {\n    dates: dates,\n    total_users: totalUsers,\n    new_users: newUsers\n  };\n  return transformedData;\n}"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -127,8 +127,8 @@
           ],
           [
             {
-              "id": "Page1_newuserswebsite",
-              "name": "newuserswebsite",
+              "id": "Page1_newusersweb",
+              "name": "newusersweb",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
@@ -147,8 +147,8 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_totaluserswebsite",
-              "name": "totaluserswebsite",
+              "id": "Page1_totalusersweb",
+              "name": "totalusersweb",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [

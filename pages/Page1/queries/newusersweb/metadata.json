@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "totalusersdms",
+    "name": "newusersweb",
     "datasource": {
       "name": "centraldb",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT count(DISTINCT dealer_id)  from googlesheets.mdms_dealer where active='true' and CAST(dealer_id AS TEXT) NOT LIKE '9%' and cast(dealer_id as text) not like '5%' ;",
+      "body": "SELECT SUM(newusers) \nFROM dashboard_data.traffic_sources\n--WHERE TO_DATE(date, 'YYYYMMDD') = CURRENT_DATE - INTERVAL '1 day';\nWHERE date::DATE = TO_DATE('{{DatePicker1.formattedDate}}', 'DD/MM/YYYY')\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -27,18 +27,24 @@
       ]
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "DatePicker1.formattedDate"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-01-08T09:07:17Z"
+    "createdAt": "2024-03-12T07:29:05Z"
   },
-  "id": "Page1_totalusersdms",
+  "id": "Page1_newusersweb",
   "deleted": false,
-  "gitSyncId": "65968d77dd20201102d4db76_659bbb45dd20201102d4dbcb"
+  "gitSyncId": "65968d77dd20201102d4db76_65f00441d72af66419ac98eb"
 }
