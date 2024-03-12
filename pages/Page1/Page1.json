@@ -137,8 +137,8 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_registereduserswebsite",
-              "name": "registereduserswebsite",
+              "id": "Page1_regisusersweb",
+              "name": "regisusersweb",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
