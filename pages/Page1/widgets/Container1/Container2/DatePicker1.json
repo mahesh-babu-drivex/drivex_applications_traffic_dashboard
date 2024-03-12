@@ -15,7 +15,7 @@
     "labelTooltip": "Choose dates earlier than today",
     "labelStyle": "BOLD",
     "isDisabled": false,
-    "onDateSelected": "{{regisusersweb.run();\nnewusersweb.run();\nnewusersweb.run()}}",
+    "onDateSelected": "{{regisusersweb.run();\nnewusersweb.run();\ntotalusersweb.run()}}",
     "isRequired": false,
     "dynamicHeight": "FIXED",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
