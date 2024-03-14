@@ -55,7 +55,8 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2024-03-14T08:42:48Z"
   },
   "id": "Page1_banglore_listed_vehiclesCopy",
   "deleted": false,

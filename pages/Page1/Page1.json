@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 87,
+          "version": 89,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -27,6 +27,16 @@
           "leftColumn": 0
         },
         "layoutOnLoadActions": [
+          [
+            {
+              "id": "Page1_last7daystrendweb",
+              "name": "last7daystrendweb",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
           [
             {
               "id": "Page1_JSObject4.setDefaultDate",
@@ -42,14 +52,6 @@
             {
               "id": "Page1_Query6",
               "name": "Query6",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_last7daystrendweb",
-              "name": "last7daystrendweb",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
