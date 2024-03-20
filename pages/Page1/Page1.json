@@ -60,16 +60,6 @@
           ],
           [
             {
-              "id": "Page1_totalusers_procx",
-              "name": "totalusers_procx",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Page1_JSObject1.fetchData",
               "name": "JSObject1.fetchData",
               "collectionId": "Page1_JSObject1",
@@ -83,44 +73,6 @@
             {
               "id": "Page1_Query2",
               "name": "Query2",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_banglore_listed_vehicles",
-              "name": "banglore_listed_vehicles",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "\n  {\n\t\t\"priceRange\": [],\n  \"vehicleTypes\": [],\n  \"brandNames\": [],\n  \"modelNames\": [],\n  \"variantNames\": [],\n  \"colors\": [],\n  \"ownerships\": [],\n  \"kmDriven\": \"\",\n  \"manufactureYear\": \"\",\n  \"engineCC\": [],\n  \"city\": \"Bangalore\",\n  \"pinCode\": \"\",\n  \"isTVSCertified\": false,\n  \"currentPage\": 0,\n  \"pageSize\": 10,\n  \"sortBy\": \"Listings: New to Old\",\n  \"userID\": \"\"\n}\n\n"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_chennailistedvehicles",
-              "name": "chennailistedvehicles",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "\n  {\n\t\t\"priceRange\": [],\n  \"vehicleTypes\": [],\n  \"brandNames\": [],\n  \"modelNames\": [],\n  \"variantNames\": [],\n  \"colors\": [],\n  \"ownerships\": [],\n  \"kmDriven\": \"\",\n  \"manufactureYear\": \"\",\n  \"engineCC\": [],\n  \"city\": \"Chennai\",\n  \"pinCode\": \"\",\n  \"isTVSCertified\": false,\n  \"currentPage\": 0,\n  \"pageSize\": 10,\n  \"sortBy\": \"Listings: New to Old\",\n  \"userID\": \"\"\n}\n\n"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_coimbatorelistedvehicles",
-              "name": "coimbatorelistedvehicles",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "\n  {\n\t\t\"priceRange\": [],\n  \"vehicleTypes\": [],\n  \"brandNames\": [],\n  \"modelNames\": [],\n  \"variantNames\": [],\n  \"colors\": [],\n  \"ownerships\": [],\n  \"kmDriven\": \"\",\n  \"manufactureYear\": \"\",\n  \"engineCC\": [],\n  \"city\": \"Coimbatore\",\n  \"pinCode\": \"\",\n  \"isTVSCertified\": false,\n  \"currentPage\": 0,\n  \"pageSize\": 10,\n  \"sortBy\": \"Listings: New to Old\",\n  \"userID\": \"\"\n}\n\n"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_totalusersdms",
-              "name": "totalusersdms",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],

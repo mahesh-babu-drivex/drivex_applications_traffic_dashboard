@@ -1,6 +1,6 @@
 {
     "mobileBottomRow": 105,
-    "widgetName": "Text5CopyCopy",
+    "widgetName": "Text5Copy",
     "displayName": "Text",
     "iconSVG": "/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
     "searchTags": [
@@ -9,7 +9,7 @@
         "label"
     ],
     "topRow": 6,
-    "bottomRow": 14,
+    "bottomRow": 10,
     "parentRowSpace": 10,
     "type": "TEXT_WIDGET",
     "hideCard": false,
@@ -19,7 +19,7 @@
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "parentColumnSpace": 16.75,
     "dynamicTriggerPathList": [],
-    "leftColumn": 49,
+    "leftColumn": 48,
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},
@@ -28,19 +28,19 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "{{chennailistedvehicles.data.result.totalRecords}}",
+    "text": "{{coimbatorelistedvehicles.data.result.totalRecords}}",
     "key": "krzji88nhl",
     "isDeprecated": false,
-    "rightColumn": 64,
+    "rightColumn": 63,
     "textAlign": "CENTER",
     "dynamicHeight": "AUTO_HEIGHT",
-    "widgetId": "0ghk4zzyc4",
+    "widgetId": "kx7ez5uj59",
     "minWidth": 450,
     "isVisible": true,
     "fontStyle": "BOLD",
     "textColor": "#231F20",
     "version": 1,
-    "parentId": "f02v5e14s3",
+    "parentId": "a7hvlblo4f",
     "tags": [
         "Suggested",
         "Content"
@@ -53,7 +53,7 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 10,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 14,
+    "originalBottomRow": 10,
     "fontSize": "1.875rem",
     "minDynamicHeight": 4
 }
