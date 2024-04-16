@@ -1,6 +1,6 @@
 {{
   {
-		"priceRange": [],
+  "priceRange": [],
   "vehicleTypes": [],
   "brandNames": [],
   "modelNames": [],

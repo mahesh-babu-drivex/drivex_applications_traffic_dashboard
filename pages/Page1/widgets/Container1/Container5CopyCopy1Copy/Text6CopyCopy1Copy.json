@@ -1,6 +1,6 @@
 {
     "mobileBottomRow": 4,
-    "widgetName": "Text6CopyCopy1",
+    "widgetName": "Text6CopyCopy1Copy",
     "displayName": "Text",
     "iconSVG": "/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
     "searchTags": [
@@ -27,19 +27,19 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "ProcX",
+    "text": "DMS",
     "key": "krzji88nhl",
     "isDeprecated": false,
     "rightColumn": 64,
     "textAlign": "CENTER",
     "dynamicHeight": "AUTO_HEIGHT",
-    "widgetId": "dqwudpoajt",
+    "widgetId": "f1s994xsv6",
     "minWidth": 450,
     "isVisible": true,
     "fontStyle": "BOLD",
     "textColor": "#e15615",
     "version": 1,
-    "parentId": "z0dwe7py1w",
+    "parentId": "mfeb5xwjd3",
     "tags": [
         "Suggested",
         "Content"

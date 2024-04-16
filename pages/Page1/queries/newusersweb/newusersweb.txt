@@ -1,4 +1,4 @@
-SELECT SUM(newusers) 
+SELECT SUM("newUsers") 
 FROM dashboard_data.traffic_sources
 --WHERE TO_DATE(date, 'YYYYMMDD') = CURRENT_DATE - INTERVAL '1 day';
 WHERE date::DATE = TO_DATE('{{DatePicker1.formattedDate}}', 'DD/MM/YYYY')

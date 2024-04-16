@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT SUM(newusers) \nFROM dashboard_data.traffic_sources\n--WHERE TO_DATE(date, 'YYYYMMDD') = CURRENT_DATE - INTERVAL '1 day';\nWHERE date::DATE = TO_DATE('{{DatePicker1.formattedDate}}', 'DD/MM/YYYY')\n",
+      "body": "SELECT SUM(\"newUsers\") \nFROM dashboard_data.traffic_sources\n--WHERE TO_DATE(date, 'YYYYMMDD') = CURRENT_DATE - INTERVAL '1 day';\nWHERE date::DATE = TO_DATE('{{DatePicker1.formattedDate}}', 'DD/MM/YYYY')\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {

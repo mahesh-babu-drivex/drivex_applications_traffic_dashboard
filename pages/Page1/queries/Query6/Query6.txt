@@ -1,36 +1,36 @@
 SELECT
     CASE
-        WHEN md.dealer_id::text LIKE '1%' THEN 'FOFO'
-        WHEN md.dealer_id::text LIKE '3%' THEN 'COCO'
+        WHEN md."DEALER_ID"::text LIKE '1%' THEN 'FOFO'
+        WHEN md."DEALER_ID"::text LIKE '3%' THEN 'COCO'
         ELSE NULL
     END AS Channel,
-    md.dealership_name,
-    md.city,
-    COUNT(uv.vehicle_id) AS floor_stock_count,
+    md."DEALERSHIP_NAME",
+    md."CITY",
+    COUNT(uv."VEHICLE_ID") AS floor_stock_count,
     COALESCE(invoice_count, 0) AS invoice_count
 FROM
-    googlesheets.mdms_dealer md
+   googlesheets."MDMS_DEALER"  md
 JOIN
-    googlesheets.uvd_veh_valu_tran uv ON md.dealer_id = uv.dealer_id
+    googlesheets."UVD_VEH_VALU_TRAN" uv ON md."DEALER_ID" = uv."DEALER_ID"
 JOIN
-    googlesheets.dms_vehicles dv ON uv.vehicle_id = dv."VEHICLE_ID"
+    googlesheets.dms_vehicles dv ON uv."VEHICLE_ID" = dv."VEHICLE_ID"
 LEFT JOIN
     (
-        SELECT enq.dealer_id, COUNT(*) AS invoice_count
-        FROM googlesheets.uvd_veh_sales_enq enq
-        JOIN googlesheets.mdms_dealer md ON enq.dealer_id = md.dealer_id
-        WHERE enq.enq_status ='4' AND md.active='true'
-        AND EXTRACT(YEAR FROM enq.modified_on) = EXTRACT(YEAR FROM CURRENT_DATE )
-        AND EXTRACT(MONTH FROM enq.modified_on) = EXTRACT(MONTH FROM CURRENT_DATE)
-        GROUP BY enq.dealer_id
-    ) AS invoice_counts ON md.dealer_id = invoice_counts.dealer_id
+        SELECT enq."DEALER_ID", COUNT(*) AS invoice_count
+        FROM googlesheets."UVD_VEH_SALES_ENQ" enq
+        JOIN googlesheets."MDMS_DEALER" md ON enq."DEALER_ID" = md."DEALER_ID"
+        WHERE enq."ENQ_STATUS" ='4' AND md."ACTIVE"='true'
+        AND EXTRACT(YEAR FROM enq."MODIFIED_ON") = EXTRACT(YEAR FROM CURRENT_DATE )
+        AND EXTRACT(MONTH FROM enq."MODIFIED_ON") = EXTRACT(MONTH FROM CURRENT_DATE)
+        GROUP BY enq."DEALER_ID"
+    ) AS invoice_counts ON md."DEALER_ID" = invoice_counts."DEALER_ID"
 WHERE
-    md.active = '1'
-    AND uv.veh_status IN ('1')
-    AND CAST(md.dealer_id AS TEXT) NOT LIKE '5%'
-    AND CAST(md.dealer_id AS TEXT) NOT LIKE '9%'
+    md."ACTIVE" = '1'
+    AND uv."VEH_STATUS" IN ('1')
+    AND CAST(md."DEALER_ID" AS TEXT) NOT LIKE '5%'
+    AND CAST(md."DEALER_ID" AS TEXT) NOT LIKE '9%'
     AND dv."IS_INTERNET_SALE" = 'true'
 GROUP BY
-    md.dealer_id, md.dealership_name, md.city, invoice_counts.invoice_count
+    md."DEALER_ID", md."DEALERSHIP_NAME", md."CITY", invoice_counts.invoice_count
 ORDER BY
-   invoice_count DESC, channel, md.city;
+   invoice_count DESC, channel, md."CITY";

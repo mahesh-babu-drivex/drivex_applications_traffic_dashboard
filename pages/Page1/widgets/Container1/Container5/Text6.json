@@ -1,6 +1,6 @@
 {
     "mobileBottomRow": 4,
-    "widgetName": "Text6CopyCopy1Copy",
+    "widgetName": "Text6",
     "displayName": "Text",
     "iconSVG": "/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
     "searchTags": [
@@ -9,7 +9,7 @@
         "label"
     ],
     "topRow": 0,
-    "bottomRow": 4,
+    "bottomRow": 5,
     "parentRowSpace": 10,
     "type": "TEXT_WIDGET",
     "hideCard": false,
@@ -27,19 +27,19 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "DMS",
+    "text": "Bangalore(COCO+FOFO)",
     "key": "krzji88nhl",
     "isDeprecated": false,
-    "rightColumn": 64,
+    "rightColumn": 63,
     "textAlign": "CENTER",
     "dynamicHeight": "AUTO_HEIGHT",
-    "widgetId": "zcllcqa4up",
+    "widgetId": "7s3itf7idm",
     "minWidth": 450,
     "isVisible": true,
     "fontStyle": "BOLD",
     "textColor": "#e15615",
     "version": 1,
-    "parentId": "q9tqzr6z6r",
+    "parentId": "wqv1lo3176",
     "tags": [
         "Suggested",
         "Content"

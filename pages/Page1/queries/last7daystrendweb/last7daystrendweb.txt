@@ -1,6 +1,6 @@
 SELECT  TO_CHAR(DATE(date),'DD-MM-YYYY') as "x",
-       SUM(totalusers) as "total_users",
-       SUM(newusers) as "new_users"
+       SUM("totalUsers") as "total_users",
+       SUM("newUsers") as "new_users"
 FROM dashboard_data.traffic_sources
 WHERE TO_DATE(date, 'YYYYMMDD') >= CURRENT_DATE - INTERVAL '8 day' -- Updated to 8 days ago to exclude today
   AND TO_DATE(date, 'YYYYMMDD') < CURRENT_DATE - INTERVAL '0 day' -- Up to yesterday
