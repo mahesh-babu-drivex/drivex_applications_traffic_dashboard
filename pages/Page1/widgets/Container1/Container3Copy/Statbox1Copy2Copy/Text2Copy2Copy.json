@@ -1,6 +1,6 @@
 {
     "mobileBottomRow": 8,
-    "widgetName": "Text2Copy1Copy1",
+    "widgetName": "Text2Copy2Copy",
     "displayName": "Text",
     "iconSVG": "/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
     "searchTags": [
@@ -17,7 +17,7 @@
     "overflow": "NONE",
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "dynamicTriggerPathList": [],
-    "leftColumn": 1,
+    "leftColumn": 0,
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},
@@ -26,19 +26,19 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "{{regsitered_users.data[0]?.registered_users || 0}}",
+    "text": "{{buy_leads_yesterday.data[0].last_month_count}}",
     "key": "mf60yemoak",
     "isDeprecated": false,
-    "rightColumn": 34,
+    "rightColumn": 64,
     "textAlign": "CENTER",
     "dynamicHeight": "FIXED",
-    "widgetId": "i6u1yjqhsn",
+    "widgetId": "jv42le098w",
     "minWidth": 450,
     "isVisible": true,
     "fontStyle": "BOLD",
     "textColor": "#231F20",
     "version": 1,
-    "parentId": "baao03wb4f",
+    "parentId": "uiex8pfiiv",
     "tags": [
         "Suggested",
         "Content"

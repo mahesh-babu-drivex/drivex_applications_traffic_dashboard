@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "totalusers_procx",
+    "name": "sell_leads_yesterday",
     "datasource": {
       "name": "central_db _prod",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "\tSELECT  count(DISTINCT userid)    from raw_live_data.usertable\n\tWHERE active='true'",
+      "body": "SELECT \n    enquiry_type,\n    SUM(CASE WHEN date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') = date_trunc('day', current_timestamp AT TIME ZONE 'IST') - INTERVAL '1 day' THEN 1 ELSE 0 END) AS yesterday_count,\n    SUM(CASE WHEN date_trunc('month', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') = date_trunc('month', current_timestamp AT TIME ZONE 'IST') - INTERVAL '1 month' THEN 1 ELSE 0 END) AS last_month_count\nFROM \n    public.zoho_sales_leads\nWHERE \n    lead_source = 'ReachX' \n    AND enquiry_type IS NOT NULL\nGROUP BY \n    enquiry_type;\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
@@ -36,9 +36,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-01-08T10:05:25Z"
+    "createdAt": "2024-05-13T07:20:55Z"
   },
-  "id": "Page1_totalusers_procx",
+  "id": "Page1_sell_leads_yesterday",
   "deleted": false,
-  "gitSyncId": "65968d77dd20201102d4db76_659bc8e5dd20201102d4dbd4"
+  "gitSyncId": "65f2b8844ad77c13c4f57e9c_6641bf574ad77c13c4f582f0"
 }

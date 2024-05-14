@@ -50,8 +50,8 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_Query6",
-              "name": "Query6",
+              "id": "Page1_sell_leads_yesterday",
+              "name": "sell_leads_yesterday",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
@@ -60,8 +60,8 @@
           ],
           [
             {
-              "id": "Page1_totalusers_procx",
-              "name": "totalusers_procx",
+              "id": "Page1_regsitered_users",
+              "name": "regsitered_users",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
@@ -89,38 +89,16 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_banglore_listed_vehicles",
-              "name": "banglore_listed_vehicles",
+              "id": "Page1_buy_leads_yesterday",
+              "name": "buy_leads_yesterday",
               "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "\n  {\n\t\t\"priceRange\": [],\n  \"vehicleTypes\": [],\n  \"brandNames\": [],\n  \"modelNames\": [],\n  \"variantNames\": [],\n  \"colors\": [],\n  \"ownerships\": [],\n  \"kmDriven\": \"\",\n  \"manufactureYear\": \"\",\n  \"engineCC\": [],\n  \"city\": \"Bangalore\",\n  \"pinCode\": \"\",\n  \"isTVSCertified\": false,\n  \"currentPage\": 0,\n  \"pageSize\": 10,\n  \"sortBy\": \"Listings: New to Old\",\n  \"userID\": \"\"\n}\n\n"
-              ],
+              "pluginType": "DB",
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_chennailistedvehicles",
-              "name": "chennailistedvehicles",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "\n  {\n  \"priceRange\": [],\n  \"vehicleTypes\": [],\n  \"brandNames\": [],\n  \"modelNames\": [],\n  \"variantNames\": [],\n  \"colors\": [],\n  \"ownerships\": [],\n  \"kmDriven\": \"\",\n  \"manufactureYear\": \"\",\n  \"engineCC\": [],\n  \"city\": \"Chennai\",\n  \"pinCode\": \"\",\n  \"isTVSCertified\": false,\n  \"currentPage\": 0,\n  \"pageSize\": 10,\n  \"sortBy\": \"Listings: New to Old\",\n  \"userID\": \"\"\n}\n\n"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_coimbatorelistedvehicles",
-              "name": "coimbatorelistedvehicles",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "\n  {\n\t\t\"priceRange\": [],\n  \"vehicleTypes\": [],\n  \"brandNames\": [],\n  \"modelNames\": [],\n  \"variantNames\": [],\n  \"colors\": [],\n  \"ownerships\": [],\n  \"kmDriven\": \"\",\n  \"manufactureYear\": \"\",\n  \"engineCC\": [],\n  \"city\": \"Coimbatore\",\n  \"pinCode\": \"\",\n  \"isTVSCertified\": false,\n  \"currentPage\": 0,\n  \"pageSize\": 10,\n  \"sortBy\": \"Listings: New to Old\",\n  \"userID\": \"\"\n}\n\n"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_totalusersdms",
-              "name": "totalusersdms",
+              "id": "Page1_trafficSource",
+              "name": "trafficSource",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
@@ -131,16 +109,6 @@
             {
               "id": "Page1_newusersweb",
               "name": "newusersweb",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "DatePicker1.formattedDate"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_regisusersweb",
-              "name": "regisusersweb",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [

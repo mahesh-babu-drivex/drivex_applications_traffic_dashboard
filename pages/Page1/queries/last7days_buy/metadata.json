@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "totalusers_procx",
+    "name": "last7days_buy",
     "datasource": {
       "name": "central_db _prod",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "\tSELECT  count(DISTINCT userid)    from raw_live_data.usertable\n\tWHERE active='true'",
+      "body": "SELECT \n    date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST')::date AS date,\n    count(DISTINCT customer_mobile_number) AS daily_count\nFROM \n    public.zoho_buy_leads\nWHERE \n    lead_source = 'ReachX' \n    AND date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') >= date_trunc('day', current_timestamp AT TIME ZONE 'IST') - interval '7 days'\n    AND date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') <= date_trunc('day', current_timestamp AT TIME ZONE 'IST') - interval '1 day'\nGROUP BY \n    date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST')::date\nORDER BY\n date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST')::date\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,9 +36,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-01-08T10:05:25Z"
+    "createdAt": "2024-05-13T07:28:57Z"
   },
-  "id": "Page1_totalusers_procx",
+  "id": "Page1_last7days_buy",
   "deleted": false,
-  "gitSyncId": "65968d77dd20201102d4db76_659bc8e5dd20201102d4dbd4"
+  "gitSyncId": "65f2b8844ad77c13c4f57e9c_6641c1394ad77c13c4f582f2"
 }

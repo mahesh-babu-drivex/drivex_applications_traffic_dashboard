@@ -1,0 +1,13 @@
+SELECT 
+    date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST')::date AS date,
+    count(DISTINCT customer_mobile_number) AS daily_count
+FROM 
+    public.zoho_buy_leads
+WHERE 
+    lead_source = 'ReachX' 
+    AND date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') >= date_trunc('day', current_timestamp AT TIME ZONE 'IST') - interval '7 days'
+    AND date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') <= date_trunc('day', current_timestamp AT TIME ZONE 'IST') - interval '1 day'
+GROUP BY 
+    date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST')::date
+ORDER BY
+ date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST')::date

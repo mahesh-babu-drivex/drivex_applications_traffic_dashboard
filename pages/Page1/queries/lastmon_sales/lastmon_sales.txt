@@ -1,0 +1,4 @@
+select count(DISTINCT customer_mobile_number) as last_month,enquiry_type from public.zoho_sales_leads
+where lead_source ='ReachX' AND date_trunc('month', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') = date_trunc('month', current_date - interval '1 month')
+and enquiry_type is not null
+group by enquiry_type

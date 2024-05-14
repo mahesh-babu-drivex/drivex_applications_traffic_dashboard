@@ -1,0 +1,15 @@
+SELECT 
+    date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST')::date AS date,
+    COUNT(DISTINCT CASE WHEN enquiry_type = 'TEST_RIDE' THEN customer_mobile_number END) AS "TEST_RIDE",
+    COUNT(DISTINCT CASE WHEN enquiry_type = 'WHATSAPP_TOUR' THEN customer_mobile_number END) AS "WHATSAPP_TOUR",
+    COUNT(DISTINCT CASE WHEN enquiry_type = 'ENQUIRY' THEN customer_mobile_number END) AS "ENQUIRY"
+FROM 
+    public.zoho_sales_leads
+WHERE 
+    lead_source = 'ReachX' 
+    AND date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') >= date_trunc('day', current_timestamp AT TIME ZONE 'IST') - INTERVAL '7 days'
+    AND date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') <= date_trunc('day', current_timestamp AT TIME ZONE 'IST') - INTERVAL '1 day'
+GROUP BY 
+    date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST')::date
+ORDER BY
+    date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST')::date;

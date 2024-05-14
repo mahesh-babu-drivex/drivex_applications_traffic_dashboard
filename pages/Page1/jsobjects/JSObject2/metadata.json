@@ -6,7 +6,12 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "variables": [],
+    "variables": [
+      {
+        "name": "option",
+        "value": "{\n  title: {\n    text: 'Last Seven Days Trend',\n    left: 'center',\n    top: '0%'\n  },\n  tooltip: {\n    trigger: 'axis'\n  },\n  legend: {\n    data: ['Test Ride', 'Whatsapp Tour', 'Enquiry'],\n    orient: 'vertical',\n    right: '5%',\n    top: 'top'\n  },\n  grid: {\n    left: '3%',\n    right: '9%',\n    bottom: '7%',\n    containLabel: true\n  },\n  toolbox: {\n    feature: {\n      saveAsImage: {}\n    }\n  },\n  xAxis: {\n    type: 'category',\n    boundaryGap: true,\n    name: 'Date',\n    nameTextStyle: {\n      fontSize: 20,\n      fontWeight: 'bold'\n    },\n    data: JSObject2.fetchData().dates,\n    axisLabel: {\n      show: true,\n      position: 'top',\n      fontSize: 16,\n      fontWeight: 'bold'\n    }\n  },\n  yAxis: {\n    type: 'value',\n    name: 'Count',\n    nameTextStyle: {\n      fontSize: 20,\n      fontWeight: 'bold'\n    },\n    axisLabel: {\n      show: true,\n      fontSize: 16,\n      fontWeight: 'bold',\n      position: 'insideLeft'\n    }\n  },\n  series: [{\n    name: 'Test Ride',\n    type: 'line',\n    data: JSObject2.fetchData().test_ride,\n    label: {\n      show: true,\n      position: 'top',\n      fontSize: 16,\n      fontWeight: 'bold'\n    }\n  }, {\n    name: 'Whatsapp Tour',\n    type: 'line',\n    data: JSObject2.fetchData().whats_app,\n    label: {\n      show: true,\n      position: 'top',\n      fontSize: 16,\n      fontWeight: 'bold'\n    }\n  }, {\n    name: 'Enquiry',\n    type: 'line',\n    data: JSObject2.fetchData().enq,\n    label: {\n      show: true,\n      position: 'top',\n      fontSize: 16,\n      fontWeight: 'bold'\n    }\n  }]\n}"
+      }
+    ],
     "userPermissions": []
   },
   "id": "Page1_JSObject2",

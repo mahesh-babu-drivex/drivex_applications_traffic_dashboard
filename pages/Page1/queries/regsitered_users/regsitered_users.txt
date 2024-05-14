@@ -1,0 +1,3 @@
+select count(DISTINCT mobile_number) AS registered_users from public.users 
+  WHERE date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') >= date_trunc('day', current_timestamp AT TIME ZONE 'IST') - interval '1 day' and role_id =5  
+	and date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') < date_trunc('day', current_timestamp AT TIME ZONE 'IST')

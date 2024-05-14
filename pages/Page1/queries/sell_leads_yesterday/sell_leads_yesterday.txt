@@ -1,0 +1,11 @@
+SELECT 
+    enquiry_type,
+    SUM(CASE WHEN date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') = date_trunc('day', current_timestamp AT TIME ZONE 'IST') - INTERVAL '1 day' THEN 1 ELSE 0 END) AS yesterday_count,
+    SUM(CASE WHEN date_trunc('month', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') = date_trunc('month', current_timestamp AT TIME ZONE 'IST') - INTERVAL '1 month' THEN 1 ELSE 0 END) AS last_month_count
+FROM 
+    public.zoho_sales_leads
+WHERE 
+    lead_source = 'ReachX' 
+    AND enquiry_type IS NOT NULL
+GROUP BY 
+    enquiry_type;

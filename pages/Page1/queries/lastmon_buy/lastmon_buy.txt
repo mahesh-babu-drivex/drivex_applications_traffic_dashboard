@@ -1,0 +1,3 @@
+SELECT count(distinct customer_mobile_number)FROM public.zoho_buy_leads
+WHERE lead_source = 'ReachX'
+    AND date_trunc('month', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') = date_trunc('month', current_date - interval '1 month');

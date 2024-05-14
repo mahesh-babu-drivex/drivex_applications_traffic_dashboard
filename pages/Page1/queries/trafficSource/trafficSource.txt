@@ -1,0 +1,5 @@
+SELECT
+  SUM(CASE WHEN "sessionDefaultChannelGrouping" IN ('Organic Search', 'Organic Video', 'Organic Social') THEN "totalUsers" ELSE 0 END) AS organic_traffic,
+  SUM(CASE WHEN "sessionDefaultChannelGrouping" IN ('Paid Search', 'Paid Video', 'Paid Social', 'Paid Other') THEN "totalUsers" ELSE 0 END) AS Paid_traffic
+FROM dashboard_data.traffic_acquisition_session_default_channel_grouping_report
+WHERE TO_DATE(date, 'YYYYMMDD') = CURRENT_DATE - INTERVAL '1 day';
