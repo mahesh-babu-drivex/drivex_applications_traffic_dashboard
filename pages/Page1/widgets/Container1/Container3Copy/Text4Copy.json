@@ -28,7 +28,7 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "Buy",
+    "text": "Sell",
     "key": "lpl9eqj1ax",
     "isDeprecated": false,
     "rightColumn": 64,
