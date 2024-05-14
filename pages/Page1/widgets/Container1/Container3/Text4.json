@@ -31,6 +31,7 @@
     "key": "lpl9eqj1ax",
     "isDeprecated": false,
     "rightColumn": 64,
+    "backgroundColor": "#f1f5f9",
     "textAlign": "CENTER",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "p3snekjfld",
@@ -53,6 +54,6 @@
     "mobileLeftColumn": 26,
     "maxDynamicHeight": 9000,
     "originalBottomRow": 7,
-    "fontSize": "1rem",
+    "fontSize": "1.25rem",
     "minDynamicHeight": 4
 }
