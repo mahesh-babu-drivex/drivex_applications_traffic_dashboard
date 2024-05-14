@@ -21,11 +21,12 @@
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},
-        {"key": "borderRadius"}
+        {"key": "borderRadius"},
+        {"key": "text"}
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "160",
+    "text": "{{Query10.data[0].count}}",
     "key": "mf60yemoak",
     "isDeprecated": false,
     "rightColumn": 64,
