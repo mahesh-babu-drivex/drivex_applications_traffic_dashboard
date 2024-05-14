@@ -7,7 +7,7 @@ FROM
     public.zoho_sales_leads
 WHERE 
     lead_source = 'ReachX' 
-    AND date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') >= date_trunc('day', current_timestamp AT TIME ZONE 'IST') - INTERVAL '7 days'
+    AND date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') >= date_trunc('day', current_timestamp AT TIME ZONE 'IST') - INTERVAL '5 days'
     AND date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') <= date_trunc('day', current_timestamp AT TIME ZONE 'IST') - INTERVAL '1 day'
 GROUP BY 
     date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST')::date
