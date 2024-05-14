@@ -25,7 +25,7 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "Last Month",
+    "text": "1st to 7th May(Old web)",
     "key": "mf60yemoak",
     "isDeprecated": false,
     "rightColumn": 64,

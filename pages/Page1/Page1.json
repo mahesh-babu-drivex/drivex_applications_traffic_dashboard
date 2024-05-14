@@ -50,8 +50,24 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_sell_leads_yesterday",
-              "name": "sell_leads_yesterday",
+              "id": "Page1_Query11",
+              "name": "Query11",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_last7days_buy",
+              "name": "last7days_buy",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_last7sales",
+              "name": "last7sales",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
@@ -81,6 +97,52 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "Page1_JSObject2.fetchData",
+              "name": "JSObject2.fetchData",
+              "collectionId": "Page1_JSObject2",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "function () {\n  const inputData = last7sales.data;\n  const dates = [];\n  const testride = [];\n  const whatsapp = [];\n  const enquiry = [];\n  inputData.forEach(item => {\n    dates.push(item.date);\n    testride.push(Number(item.TEST_RIDE));\n    whatsapp.push(Number(item.WHATSAPP_TOUR));\n    enquiry.push(Number(item.ENQUIRY));\n  });\n  const transformedData = {\n    dates: dates,\n    test_ride: testride,\n    whats_app: whatsapp,\n    enq: enquiry\n  };\n  return transformedData;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_JSObject3.fetchData",
+              "name": "JSObject3.fetchData",
+              "collectionId": "Page1_JSObject3",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "function () {\n  const inputData = last7days_buy.data;\n  const dates = [];\n  const daily_count = [];\n  inputData.forEach(item => {\n    dates.push(item.date);\n    daily_count.push(Number(item.daily_count));\n  });\n  const transformedData = {\n    date: dates,\n    daily: daily_count\n  };\n  return transformedData;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_Query10",
+              "name": "Query10",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_Query12",
+              "name": "Query12",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_Query13",
+              "name": "Query13",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Page1_Query2",
               "name": "Query2",
               "confirmBeforeExecute": false,
@@ -89,8 +151,8 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_buy_leads_yesterday",
-              "name": "buy_leads_yesterday",
+              "id": "Page1_Query9",
+              "name": "Query9",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],

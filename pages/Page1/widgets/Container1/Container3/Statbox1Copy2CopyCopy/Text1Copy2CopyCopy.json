@@ -1,6 +1,6 @@
 {
     "mobileBottomRow": 4,
-    "widgetName": "Text1Copy2",
+    "widgetName": "Text1Copy2CopyCopy",
     "displayName": "Text",
     "iconSVG": "/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
     "searchTags": [
@@ -9,7 +9,7 @@
         "label"
     ],
     "topRow": 0,
-    "bottomRow": 5,
+    "bottomRow": 8,
     "type": "TEXT_WIDGET",
     "hideCard": false,
     "mobileRightColumn": 37,
@@ -25,19 +25,19 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "9th to 13th May(ReachX)",
+    "text": "1st to 7th May(Old web)",
     "key": "mf60yemoak",
     "isDeprecated": false,
     "rightColumn": 64,
     "textAlign": "CENTER",
     "dynamicHeight": "FIXED",
-    "widgetId": "lmrd9fpezw",
+    "widgetId": "wec5p7tkg9",
     "minWidth": 450,
     "isVisible": true,
     "fontStyle": "BOLD",
     "textColor": "#cf4d10",
     "version": 1,
-    "parentId": "zjrq0wm25k",
+    "parentId": "hm2nkrgyi2",
     "tags": [
         "Suggested",
         "Content"

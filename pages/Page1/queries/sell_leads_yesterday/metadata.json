@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT \n    enquiry_type,\n    SUM(CASE WHEN date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') = date_trunc('day', current_timestamp AT TIME ZONE 'IST') - INTERVAL '1 day' THEN 1 ELSE 0 END) AS yesterday_count,\n    SUM(CASE WHEN date_trunc('month', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') = date_trunc('month', current_timestamp AT TIME ZONE 'IST') - INTERVAL '1 month' THEN 1 ELSE 0 END) AS last_month_count\nFROM \n    public.zoho_sales_leads\nWHERE \n    lead_source = 'ReachX' \n    AND enquiry_type IS NOT NULL\nGROUP BY \n    enquiry_type;\n",
+      "body": "SELECT \n    enquiry_type,\n    SUM(CASE WHEN date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') = date_trunc('day', current_timestamp AT TIME ZONE 'IST') - INTERVAL '1 day' THEN 1 ELSE 0 END) AS yesterday_count,\n    SUM(CASE WHEN date_trunc('month', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') = date_trunc('month', current_timestamp AT TIME ZONE 'IST') - INTERVAL '1 month' THEN 1 ELSE 0 END) AS last_month_count\nFROM \n    public.zoho_sales_leads\nWHERE \n    lead_source = 'Website' \n    AND enquiry_type IS NOT NULL\nGROUP BY \n    enquiry_type;\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],

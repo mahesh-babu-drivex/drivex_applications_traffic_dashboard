@@ -21,7 +21,7 @@ export default {
   },
 	option : {
   title: {
-    text: 'Last Seven Days Trend',
+    text: 'Last Seven Days Trend(ReachX)',
      left: 'center', // Center the title horizontally
     top: '0%'
 

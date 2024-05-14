@@ -5,7 +5,7 @@ SELECT
 FROM 
     public.zoho_sales_leads
 WHERE 
-    lead_source = 'ReachX' 
+    lead_source = 'Website' 
     AND enquiry_type IS NOT NULL
 GROUP BY 
     enquiry_type;

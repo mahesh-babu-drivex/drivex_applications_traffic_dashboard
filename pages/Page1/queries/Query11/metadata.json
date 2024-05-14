@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "last7days_buy",
+    "name": "Query11",
     "datasource": {
       "name": "central_db _prod",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT \n    date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST')::date AS date,\n    count(DISTINCT customer_mobile_number) AS daily_count\nFROM \n    public.zoho_buy_leads\nWHERE \n    lead_source = 'ReachX' \n    AND date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') >= date_trunc('day', current_timestamp AT TIME ZONE 'IST') - interval '7 days'\n    AND date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST') <= date_trunc('day', current_timestamp AT TIME ZONE 'IST') - interval '1 day'\nGROUP BY \n    date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST')::date\nORDER BY\n date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST')::date\n",
+      "body": "select count(*),enquiry_type from public.zoho_sales_leads where created_at>='2024-05-09' and created_at<='2024-05-13'\nand lead_source='ReachX'  GROUP BY enquiry_type",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,9 +36,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-05-13T07:28:57Z"
+    "createdAt": "2024-05-14T09:27:28Z"
   },
-  "id": "Page1_last7days_buy",
+  "id": "Page1_Query11",
   "deleted": false,
-  "gitSyncId": "65f2b8844ad77c13c4f57e9c_6641c1394ad77c13c4f582f2"
+  "gitSyncId": "65f2b8844ad77c13c4f57e9c_66432e804ad77c13c4f5832d"
 }
