@@ -1,2 +1,2 @@
-select count(*) from public.zoho_sales_leads where created_at>='2024-05-09' and created_at<='2024-05-13'
+select count(*) from public.zoho_sales_leads where created_at>='2024-05-09' and created_at<='2024-05-15'
 and lead_source='ReachX'  
