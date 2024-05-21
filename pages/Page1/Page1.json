@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1292,
+          "bottomRow": 1640,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -75,6 +75,17 @@
             }
           ],
           [
+            {
+              "id": "Page1_dealerss_date.setDefaultDate",
+              "name": "dealerss_date.setDefaultDate",
+              "collectionId": "Page1_dealerss_date",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "function () {\n  const today = new Date();\n  const yesterday = new Date(today);\n  yesterday.setDate(today.getDate() - 1);\n  const last7thDay = new Date(today);\n  last7thDay.setDate(today.getDate() - 7);\n  const yesterdayDate = `${yesterday.getFullYear()}-${(yesterday.getMonth() + 1).toString().padStart(2, '0')}-${yesterday.getDate()}`;\n  const last7thDayDate = `${last7thDay.getFullYear()}-${(last7thDay.getMonth() + 1).toString().padStart(2, '0')}-${last7thDay.getDate()}`;\n  return {\n    yesterdayDate,\n    last7thDayDate\n  };\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "Page1_regsitered_users",
               "name": "regsitered_users",
@@ -148,6 +159,17 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_dealer_wise_lead",
+              "name": "dealer_wise_lead",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "DatePicker2.formattedDate",
+                "DatePicker2Copy.formattedDate"
+              ],
               "timeoutInMillisecond": 10000
             },
             {

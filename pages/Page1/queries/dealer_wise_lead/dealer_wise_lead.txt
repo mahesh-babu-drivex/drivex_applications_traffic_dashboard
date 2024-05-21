@@ -1,0 +1,26 @@
+SELECT
+    p.company_name,
+    p.city,
+    COUNT(CASE WHEN z.enquiry_type = 'WHATSAPP_TOUR' THEN 1 END) AS Whats_App_Tour,
+    COUNT(CASE WHEN z.enquiry_type = 'TEST_RIDE' THEN 1 END) AS Test_Ride,
+    COUNT(CASE WHEN z.enquiry_type = 'ENQUIRY' THEN 1 END) AS Enquiry,
+    COUNT(*) AS Total_Enquiries
+FROM
+    zoho_sales_leads AS z
+JOIN
+    vehicles AS v ON z.registration_number = v.registration_number
+LEFT JOIN
+    retail_inventories r ON r.vehicle_id = v.vehicle_id
+LEFT JOIN
+    partners p ON p.partner_id = r.partner_id
+WHERE
+    z.lead_source = 'ReachX' 
+    AND z.created_at BETWEEN {{DatePicker2.formattedDate}} AND {{DatePicker2Copy.formattedDate}} -- Replace 'start_date' and 'end_date' with your desired date range
+    AND p.company_name IS NOT NULL
+GROUP BY
+    p.company_name,
+    p.city
+ORDER BY
+	Total_Enquiries DESC,
+    p.company_name,
+    p.city;
