@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT\n    p.company_name,\n    p.city,\n    COUNT(CASE WHEN z.enquiry_type in ('WHATSAPP_TOUR','WHATSAPP TOUR') THEN 1 END) AS Whats_App_Tour,\n    COUNT(CASE WHEN z.enquiry_type in ('TEST_RIDE','TEST DRIVE') THEN 1 END) AS Test_Ride,\n    COUNT(CASE WHEN z.enquiry_type in ('ENQUIRY','VEHICLE_ENQUIRY') THEN 1 END) AS Enquiry,\n    COUNT(*) AS Total_Enquiries\nFROM\n    zoho_sales_leads AS z\nJOIN\n    vehicles AS v ON z.registration_number = v.registration_number\nLEFT JOIN\n    retail_inventories r ON r.vehicle_id = v.vehicle_id\nLEFT JOIN\n    partners p ON p.partner_id = r.partner_id\nWHERE\n    z.lead_source = 'ReachX' \n    AND z.created_at BETWEEN {{DatePicker2.formattedDate}} AND {{DatePicker2Copy.formattedDate}} -- Replace 'start_date' and 'end_date' with your desired date range\n    AND p.company_name IS NOT NULL\nGROUP BY\n    p.company_name,\n    p.city\nORDER BY\n\tTotal_Enquiries DESC,\n    p.company_name,\n    p.city;\n",
+      "body": "SELECT\n    p.company_name,\n    p.city,\n    COUNT(CASE WHEN z.enquiry_type in ('WHATSAPP_TOUR','WHATSAPP TOUR') THEN 1 END) AS Whats_App_Tour,\n    COUNT(CASE WHEN z.enquiry_type in ('TEST_RIDE','TEST DRIVE') THEN 1 END) AS Test_Ride,\n    COUNT(CASE WHEN z.enquiry_type in ('ENQUIRY','VEHICLE_ENQUIRY') THEN 1 END) AS Enquiry,\n    COUNT(*) AS Total_Enquiries\nFROM\n    zoho_sales_leads AS z\nJOIN\n    vehicles AS v ON z.registration_number = v.registration_number\nLEFT JOIN\n    retail_inventories r ON r.vehicle_id = v.vehicle_id\nLEFT JOIN\n    partners p ON p.partner_id = r.partner_id\nWHERE\n    z.lead_source = 'ReachX' \n    AND z.created_at BETWEEN {{DatePicker2.selectedDate}} AND {{DatePicker2Copy.selectedDate}} -- Replace 'start_date' and 'end_date' with your desired date range\n    AND p.company_name IS NOT NULL\nGROUP BY\n    p.company_name,\n    p.city\nORDER BY\n\tTotal_Enquiries DESC,\n    p.company_name,\n    p.city;\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,8 +36,8 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "DatePicker2.formattedDate",
-      "DatePicker2Copy.formattedDate"
+      "DatePicker2.selectedDate",
+      "DatePicker2Copy.selectedDate"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

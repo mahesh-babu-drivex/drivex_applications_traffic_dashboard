@@ -15,7 +15,7 @@ LEFT JOIN
     partners p ON p.partner_id = r.partner_id
 WHERE
     z.lead_source = 'ReachX' 
-    AND z.created_at BETWEEN {{DatePicker2.formattedDate}} AND {{DatePicker2Copy.formattedDate}} -- Replace 'start_date' and 'end_date' with your desired date range
+    AND z.created_at BETWEEN {{DatePicker2.selectedDate}} AND {{DatePicker2Copy.selectedDate}} -- Replace 'start_date' and 'end_date' with your desired date range
     AND p.company_name IS NOT NULL
 GROUP BY
     p.company_name,

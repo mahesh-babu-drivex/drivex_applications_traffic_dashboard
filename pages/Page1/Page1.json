@@ -87,6 +87,22 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "Page1_Query14",
+              "name": "Query14",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_Query15",
+              "name": "Query15",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Page1_regsitered_users",
               "name": "regsitered_users",
               "confirmBeforeExecute": false,
@@ -115,6 +131,17 @@
               "pluginType": "JS",
               "jsonPathKeys": [
                 "function () {\n  const today = new Date();\n  const yesterday = new Date(today);\n  yesterday.setDate(today.getDate() - 1);\n  const yesterdayDate = `${yesterday.getFullYear()}-${(yesterday.getMonth() + 1).toString().padStart(2, '0')}-${yesterday.getDate().toString().padStart(2, '0')}`;\n  return yesterdayDate;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_JSObject5.loadQueries",
+              "name": "JSObject5.loadQueries",
+              "collectionId": "Page1_JSObject5",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  await Query14.run();\n  await Query15.run();\n  if (Query14.data && Query15.data) {\n    dealer_wise_lead.run({\n      startDate: Query14.data,\n      endDate: Query15.data\n    });\n  }\n}"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -156,8 +183,8 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "DatePicker2.formattedDate",
-                "DatePicker2Copy.formattedDate"
+                "DatePicker2Copy.selectedDate",
+                "DatePicker2.selectedDate"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -171,17 +198,6 @@
             }
           ],
           [
-            {
-              "id": "Page1_dealerss_date.setDefaultDate",
-              "name": "dealerss_date.setDefaultDate",
-              "collectionId": "Page1_dealerss_date",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "function () {\n  const today = new Date();\n  const yesterday = new Date(today);\n  yesterday.setDate(today.getDate() - 1);\n  const last7thDay = new Date(today);\n  last7thDay.setDate(today.getDate() - 7);\n  const yesterdayDate = `${yesterday.getFullYear()}-${(yesterday.getMonth() + 1).toString().padStart(2, '0')}-${yesterday.getDate()}`;\n  const last7thDayDate = `${last7thDay.getFullYear()}-${(last7thDay.getMonth() + 1).toString().padStart(2, '0')}-${last7thDay.getDate()}`;\n  return {\n    yesterdayDate,\n    last7thDayDate\n  };\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            },
             {
               "id": "Page1_newusersweb",
               "name": "newusersweb",

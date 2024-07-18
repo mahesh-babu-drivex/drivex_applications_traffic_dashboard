@@ -43,7 +43,7 @@
     "labelPosition": "Top",
     "key": "alykw1i9fq",
     "labelTextSize": "0.875rem",
-    "defaultDate": "{{dealerss_date.setDefaultDate.data.yesterdayDate}}",
+    "defaultDate": "{{Query15.data[0].last_7th_day_date}}",
     "isDeprecated": false,
     "rightColumn": 63,
     "widgetId": "krlewfc7pk",

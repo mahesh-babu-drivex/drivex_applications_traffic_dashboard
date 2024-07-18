@@ -1,0 +1,1 @@
+SELECT CURRENT_DATE - INTERVAL '1 days' AS last_7th_day_date;
