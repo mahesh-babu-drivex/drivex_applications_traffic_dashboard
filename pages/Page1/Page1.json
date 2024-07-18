@@ -39,17 +39,6 @@
           ],
           [
             {
-              "id": "Page1_JSObject4.setDefaultDate",
-              "name": "JSObject4.setDefaultDate",
-              "collectionId": "Page1_JSObject4",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "function () {\n  const today = new Date();\n  const yesterday = new Date(today);\n  yesterday.setDate(today.getDate() - 1);\n  const yesterdayDate = `${yesterday.getFullYear()}-${(yesterday.getMonth() + 1).toString().padStart(2, '0')}-${yesterday.getDate().toString().padStart(2, '0')}`;\n  return yesterdayDate;\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Page1_Query11",
               "name": "Query11",
               "confirmBeforeExecute": false,
@@ -68,27 +57,6 @@
             {
               "id": "Page1_last7sales",
               "name": "last7sales",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Page1_dealerss_date.setDefaultDate",
-              "name": "dealerss_date.setDefaultDate",
-              "collectionId": "Page1_dealerss_date",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "function () {\n  const today = new Date();\n  const yesterday = new Date(today);\n  yesterday.setDate(today.getDate() - 1);\n  const last7thDay = new Date(today);\n  last7thDay.setDate(today.getDate() - 7);\n  const yesterdayDate = `${yesterday.getFullYear()}-${(yesterday.getMonth() + 1).toString().padStart(2, '0')}-${yesterday.getDate()}`;\n  const last7thDayDate = `${last7thDay.getFullYear()}-${(last7thDay.getMonth() + 1).toString().padStart(2, '0')}-${last7thDay.getDate()}`;\n  return {\n    yesterdayDate,\n    last7thDayDate\n  };\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_regsitered_users",
-              "name": "regsitered_users",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
@@ -119,6 +87,16 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "Page1_regsitered_users",
+              "name": "regsitered_users",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "Page1_JSObject3.fetchData",
               "name": "JSObject3.fetchData",
               "collectionId": "Page1_JSObject3",
@@ -126,6 +104,17 @@
               "pluginType": "JS",
               "jsonPathKeys": [
                 "function () {\n  const inputData = last7days_buy.data;\n  const dates = [];\n  const daily_count = [];\n  inputData.forEach(item => {\n    dates.push(item.date);\n    daily_count.push(Number(item.daily_count));\n  });\n  const transformedData = {\n    date: dates,\n    daily: daily_count\n  };\n  return transformedData;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_JSObject4.setDefaultDate",
+              "name": "JSObject4.setDefaultDate",
+              "collectionId": "Page1_JSObject4",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "function () {\n  const today = new Date();\n  const yesterday = new Date(today);\n  yesterday.setDate(today.getDate() - 1);\n  const yesterdayDate = `${yesterday.getFullYear()}-${(yesterday.getMonth() + 1).toString().padStart(2, '0')}-${yesterday.getDate().toString().padStart(2, '0')}`;\n  return yesterdayDate;\n}"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -182,6 +171,17 @@
             }
           ],
           [
+            {
+              "id": "Page1_dealerss_date.setDefaultDate",
+              "name": "dealerss_date.setDefaultDate",
+              "collectionId": "Page1_dealerss_date",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "function () {\n  const today = new Date();\n  const yesterday = new Date(today);\n  yesterday.setDate(today.getDate() - 1);\n  const last7thDay = new Date(today);\n  last7thDay.setDate(today.getDate() - 7);\n  const yesterdayDate = `${yesterday.getFullYear()}-${(yesterday.getMonth() + 1).toString().padStart(2, '0')}-${yesterday.getDate()}`;\n  const last7thDayDate = `${last7thDay.getFullYear()}-${(last7thDay.getMonth() + 1).toString().padStart(2, '0')}-${last7thDay.getDate()}`;\n  return {\n    yesterdayDate,\n    last7thDayDate\n  };\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "Page1_newusersweb",
               "name": "newusersweb",

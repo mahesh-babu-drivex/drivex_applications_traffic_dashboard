@@ -1,8 +1,8 @@
 SELECT 
     date_trunc('day', created_at AT TIME ZONE 'UTC' AT TIME ZONE 'IST')::date AS date,
-    COUNT(DISTINCT CASE WHEN enquiry_type = 'TEST_RIDE' THEN customer_mobile_number END) AS "TEST_RIDE",
-    COUNT(DISTINCT CASE WHEN enquiry_type = 'WHATSAPP_TOUR' THEN customer_mobile_number END) AS "WHATSAPP_TOUR",
-    COUNT(DISTINCT CASE WHEN enquiry_type = 'ENQUIRY' THEN customer_mobile_number END) AS "ENQUIRY"
+    COUNT(DISTINCT CASE WHEN enquiry_type in ('TEST_RIDE','TEST DRIVE') THEN customer_mobile_number END) AS "TEST_RIDE",
+    COUNT(DISTINCT CASE WHEN enquiry_type in ('WHATSAPP_TOUR','WHATSAPP TOUR') THEN customer_mobile_number END) AS "WHATSAPP_TOUR",
+    COUNT(DISTINCT CASE WHEN enquiry_type in ('ENQUIRY','VEHICLE_ENQUIRY') THEN customer_mobile_number END) AS "ENQUIRY"
 FROM 
     public.zoho_sales_leads
 WHERE 
